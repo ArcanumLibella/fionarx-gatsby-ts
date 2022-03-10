@@ -63,6 +63,10 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.29.3",
     "eslint-plugin-react-hooks": "4.3.0",
+    "autoprefixer": "^9.8.8",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^1.1.5",
+
     "husky": "7.0.4",
     "identity-obj-proxy": "3.0.0",
     "jest": "27.5.1",

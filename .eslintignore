@@ -1,0 +1,12 @@
+.prettierrc
+.eslintrc.js
+babel.config.js
+tailwind.config.js
+
+# DO ignore JSON-with-comments files
+tsconfig.json
+tsconfig.paths.json
+
+build/*
+node_modules/*
+__tests__/*

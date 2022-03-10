@@ -9,7 +9,7 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 2019,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "globals": {
@@ -23,8 +23,16 @@
     "prettier",
     "plugin:jest/recommended",
     "plugin:jest/style"
+    // 'eslint:recommended',
+    // 'plugin:@typescript-eslint/eslint-recommended',
+    // 'plugin:@typescript-eslint/recommended',
+    // 'plugin:react/recommended',
+    // 'plugin:jsx-a11y/recommended',
+    // 'plugin:prettier/recommended', // Make sure this is always the last element in the array.
+  
   ],
   "rules": {
+    "no-console": ["warn", { "allow": ["error"] }],
     "jest/prefer-strict-equal": "error",
     "jest/prefer-to-have-length": "warn",
     "prettier/prettier": "error",
@@ -57,6 +65,31 @@
       2,
       {
         "namedComponents": "function-declaration"
+      }
+    ],
+    "simple-import-sort/imports": [
+      0,
+      {
+        "groups": [
+          ["^react"],
+          ["^\\u0000", "^@?\\w"],
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          ["^.+\\.s?css$"]
+        ]
+      }
+    ],
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    // "unused-imports/no-unused-imports-ts": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "ignoreRestSiblings": true,
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
       }
     ]
   },
@@ -91,14 +124,7 @@
             ]
           }
         ],
-        "quotes": "off",
-        "@typescript-eslint/quotes": [
-          2,
-          "backtick",
-          {
-            "avoidEscape": true
-          }
-        ],
+        "quotes": 1,
         "@typescript-eslint/no-unused-vars": [2, { "argsIgnorePattern": "^_" }]
       }
     }
