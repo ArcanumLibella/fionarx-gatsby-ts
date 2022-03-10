@@ -21,7 +21,7 @@ const menuItems: MenuItemType[] = [
   },
   {
     label: 'About me',
-    path: '/about-me',
+    path: '/about',
   },
   {
     label: 'Skills',

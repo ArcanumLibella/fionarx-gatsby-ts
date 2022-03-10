@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import { Title } from '@/components/atoms/Title';
+import { Hero } from '@/components/organisms/Hero';
 import { Menu } from '@/components/organisms/Menu';
 
-const Home = () => {
+const HomePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const onToggleMenu = () => {
@@ -11,11 +11,11 @@ const Home = () => {
   };
 
   return (
-    <main className="App">
+    <main className="App relative bg-purple-dark h-full">
       <Menu onToggleMenu={onToggleMenu} isMenuOpen={isMenuOpen} />
-      <Title>Hello TypeScript!</Title>
+      <Hero />
     </main>
   );
 };
 
-export default Home;
+export default HomePage;

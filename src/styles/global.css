@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GLOBAL STYLE */
+html {
+    @apply font-body;
+    @apply text-white;
+    @apply bg-purple-ultraDark;
+  }
+
+/* FONTS IMPORT */
+@font-face {
+    font-family: 'Brother';
+    src: url('../assets/fonts/brother-1816-black-webfont.woff2') format('woff2'),
+         url('../assets/fonts/brother-1816-black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brother';
+    src: url('../assets/fonts/brother-1816-bold-webfont.woff2') format('woff2'),
+         url('../assets/fonts/brother-1816-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brother';
+    src: url('../assets/fonts/brother-1816-medium-webfont.woff2') format('woff2'),
+         url('../assets/fonts/brother-1816-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Goku';
+    src: url('../assets/fonts/goku-webfont.woff2') format('woff2'),
+         url('../assets/fonts/goku-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../assets/fonts/JosefinSans-Light.woff2') format('woff2'),
+        url('../assets/fonts/JosefinSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
