@@ -64,7 +64,7 @@
     "react/function-component-definition": [
       2,
       {
-        "namedComponents": "function-declaration"
+        "namedComponents": "arrow-function"
       }
     ],
     "simple-import-sort/imports": [
@@ -91,7 +91,8 @@
         "args": "after-used",
         "argsIgnorePattern": "^_"
       }
-    ]
+    ],
+    "arrow-body-style": ["error", "always"]
   },
   "overrides": [
     {
