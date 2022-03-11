@@ -9,7 +9,7 @@ export const MenuItem: VFC<MenuItemProps> = ({ label, path }) => {
   return (
     <Link
       to={path}
-      className="font-black uppercase cursor-pointer text-xxl font-brother text-stroke-white text-stroke-2 text-fill-transparent"
+      className="font-black uppercase cursor-pointer md:text-[10vw] lg:text-[7vh] xl:text-[10vh] font-brother text-stroke-white text-stroke-2 text-fill-transparent"
     >
       {label}
     </Link>

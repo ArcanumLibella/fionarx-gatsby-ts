@@ -44,8 +44,8 @@ export const Menu = ({ isMenuOpen /* , onToggleMenu  */ }: MenuProps) => {
     // TODO: Style menu + add close menu if click outside (useRef ?)
     <div
       // onClick={handleCloseMenu}
-      className={`Menu flex justify-between absolute w-full md:w-1/2 lg:w-8/12 z-50 transition-all ease-out duration-300 cursor-pointer ${
-        isMenuOpen ? 'left-0' : '-left-full md:-left-1/2 lg:-left-2/3'
+      className={`Menu flex justify-between absolute w-full lg:w-8/12 z-50 transition-all ease-out duration-300 cursor-pointer ${
+        isMenuOpen ? 'left-0' : '-left-full lg:-left-2/3'
       }`}
       // role="button"
       // aria-hidden="true"

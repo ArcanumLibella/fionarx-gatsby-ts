@@ -1,9 +1,11 @@
 import React from 'react';
 
-export const NotFoundPage = () => {
+const NotFound = () => {
   return (
-    <main>
+    <main className="flex items-center justify-center h-screen bg-midnight">
       <p>Sorry, page not found!</p>
     </main>
   );
 };
+
+export default NotFound;
