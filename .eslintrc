@@ -20,7 +20,6 @@
   "extends": [
     "airbnb",
     "prettier",
-    // "prettier/@typescript-eslint",
     "plugin:react/recommended",
     "eslint:recommended",
     "plugin:jest/recommended",
