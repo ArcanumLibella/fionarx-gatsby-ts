@@ -1,5 +1,9 @@
 import React, { MouseEvent } from 'react';
 
+import { BurgerIcon } from '@/assets/icons';
+
+import { SocialIcons } from '../SocialIcons';
+
 type NavButtonProps = {
   onToggleMenu: () => void;
 };
@@ -12,13 +16,16 @@ export const NavButton = ({ onToggleMenu }: NavButtonProps) => {
 
   return (
     <div
-      className="absolute -right-20 flex justify-center w-20 h-screen px-6 py-4 bg-purple-ultraDark"
+      className="absolute left-0 flex flex-col items-center justify-between w-20 h-screen py-4 z-100 bg-purple-ultraDark"
       onClick={handleToggleMenu}
       role="button"
       aria-hidden="true"
     >
-      {/* TODO: Styliser la nav avec 3 petits traits ? */}
-      MENU
+      <span className="flex-1">MENU</span>
+      <div className="flex flex-1 items-center justify-end w-12">
+        <BurgerIcon />
+      </div>
+      <SocialIcons />
     </div>
   );
 };

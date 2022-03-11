@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       colors: {
         purple: {
-          ultraDark: '#210044',
+          ultraDark: '#1A0035',
+          // ultraDark: '#210044',
           dark: '#3C0D6E',
           DEFAULT: '#410087',
           light: '#7729CC',
@@ -37,15 +38,20 @@ module.exports = {
         sm: '.875rem', // 14px
         base: '1rem', // 16px
         md: '1.125rem', // 18px
-        xl: '6vw', // 64px
-        '2xl': '5.5rem', // 88px
-        '3xl': '6rem', // 96px
-        '4xl': '7.5rem', // 120px
-        '5xl': '9rem', // 144px
+        lg: '2rem', // 32px
+        xl: '8vh',
+        xxl: '10vh',
+        xxxl: '12vh',
       },
       backgroundImage: {
-        'midnight': "linear-gradient(to right top, rgb(17, 24, 39), rgb(88, 28, 135), rgb(124, 58, 237))')",
+        'midnight': "linear-gradient(to bottom left, #210044, #3C0D6E, #1A0035)",
         'twilight': "linear-gradient(81.95deg, #410087 -30.67%, #E94057 43.66%, #F27121 96.52%)",
+      },
+      width: {
+        12: '48px'
+      },
+      zIndex: {
+        100: 100
       },
       textFillColor: theme => theme('borderColor'),
       textStrokeColor: theme => theme('borderColor'),
@@ -60,5 +66,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-text-fill-stroke')(), // no options to configure
+  ],
 }

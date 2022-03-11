@@ -18,18 +18,17 @@
   },
   "plugins": ["react", "react-hooks", "jsx-a11y", "prettier", "jest"],
   "extends": [
-    "plugin:react/recommended",
     "airbnb",
     "prettier",
+    // "prettier/@typescript-eslint",
+    "plugin:react/recommended",
+    "eslint:recommended",
     "plugin:jest/recommended",
-    "plugin:jest/style"
-    // 'eslint:recommended',
-    // 'plugin:@typescript-eslint/eslint-recommended',
-    // 'plugin:@typescript-eslint/recommended',
-    // 'plugin:react/recommended',
-    // 'plugin:jsx-a11y/recommended',
-    // 'plugin:prettier/recommended', // Make sure this is always the last element in the array.
-  
+    "plugin:jest/style",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended" // Make sure this is always the last element in the array.
   ],
   "rules": {
     "no-console": ["warn", { "allow": ["error"] }],
@@ -82,7 +81,6 @@
     "import/first": "error",
     "import/newline-after-import": "error",
     "import/no-duplicates": "error",
-    // "unused-imports/no-unused-imports-ts": "error",
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
@@ -92,7 +90,8 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    "arrow-body-style": ["error", "always"]
+    "arrow-body-style": ["off", "always"],
+    "prefer-arrow-callback": "off"
   },
   "overrides": [
     {
