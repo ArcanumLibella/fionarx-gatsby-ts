@@ -16,12 +16,12 @@ export const NavButton = ({ onToggleMenu }: NavButtonProps) => {
 
   return (
     <div
-      className="absolute left-0 flex flex-col items-center justify-between w-20 h-screen py-4 z-100 bg-purple-ultraDark"
+      className="absolute left-0 flex-col items-center justify-between hidden w-20 h-screen py-4 md:flex z-100 bg-purple-ultraDark"
       onClick={handleToggleMenu}
       role="button"
       aria-hidden="true"
     >
-      <span className="flex-1">MENU</span>
+      <span className="flex justify-start flex-1">MENU</span>
       <div className="flex items-center justify-end flex-1 w-12">
         {/* <BurgerIcon /> */}
       </div>

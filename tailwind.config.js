@@ -32,16 +32,17 @@ module.exports = {
         // body: ['Josefin Sans', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
-        // xxs: '.5rem', // 8px
+        xxs: '.5rem', // 8px
         xs: '.625rem', // 10px
-        // tiny: '.75rem', // 12px
+        tiny: '.75rem', // 12px
         sm: '.875rem', // 14px
         base: '1rem', // 16px
         md: '1.125rem', // 18px
         lg: '2rem', // 32px
-        xl: '8vh',
-        xxl: '10vh',
-        xxxl: '12vh',
+        // xl: '8vw',
+        // '2xl': '8vh',
+        // '3xl': '10vh',
+        // '4xl': '12vh',
       },
       backgroundImage: {
         'midnight': "linear-gradient(to bottom left, #210044, #3C0D6E, #1A0035)",
