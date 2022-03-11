@@ -1,8 +1,8 @@
 import React, { MouseEvent } from 'react';
 
-import { BurgerIcon } from '@/assets/icons';
+// import { BurgerIcon } from '@/assets/icons';
 
-import { SocialIcons } from '../SocialIcons';
+// import { SocialIcons } from '../SocialIcons';
 
 type NavButtonProps = {
   onToggleMenu: () => void;
@@ -22,10 +22,10 @@ export const NavButton = ({ onToggleMenu }: NavButtonProps) => {
       aria-hidden="true"
     >
       <span className="flex-1">MENU</span>
-      <div className="flex flex-1 items-center justify-end w-12">
-        <BurgerIcon />
+      <div className="flex items-center justify-end flex-1 w-12">
+        {/* <BurgerIcon /> */}
       </div>
-      <SocialIcons />
+      {/* <SocialIcons /> */}
     </div>
   );
 };

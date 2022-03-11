@@ -47,11 +47,54 @@ module.exports = {
         'midnight': "linear-gradient(to bottom left, #210044, #3C0D6E, #1A0035)",
         'twilight': "linear-gradient(81.95deg, #410087 -30.67%, #E94057 43.66%, #F27121 96.52%)",
       },
+      height: {
+        12: '48px',
+      },
       width: {
-        12: '48px'
+        12: '48px',
       },
       zIndex: {
         100: 100
+      },
+      keyframes: {
+        movement: {
+          '0%, 100%': { transform: 'translateY(4%) rotateY(4deg)' },
+          '50%': { transform: 'translateY(8%) rotateY(12deg)' },
+          '100%': { transform: 'translateY(4%) rotateY(4deg)' },
+        },
+        transform: {
+          '0%, 100%': { borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%' },
+          '14%': { borderRadius: '40% 60% 54% 46% / 49% 60% 40% 51%' },
+          '28%': { borderRadius: '54% 46% 38% 62% / 49% 70% 30% 51%' },
+          '42%': { borderRadius: '61% 39% 55% 45% / 61% 38% 62% 39%' },
+          '56%': { borderRadius: '61% 39% 67% 33% / 70% 50% 50% 30%' },
+          '70%': { borderRadius: '50% 50% 34% 66% / 56% 68% 32% 44%' },
+          '84%': { borderRadius: '46% 54% 50% 50% / 35% 61% 39% 65%' },
+        },
+        transform3s: {
+          '0%, 100%': { borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%' },
+          '14%': { borderRadius: '40% 60% 54% 46% / 49% 60% 40% 51%' },
+          '28%': { borderRadius: '54% 46% 38% 62% / 49% 70% 30% 51%' },
+          '42%': { borderRadius: '61% 39% 55% 45% / 61% 38% 62% 39%' },
+          '56%': { borderRadius: '61% 39% 67% 33% / 70% 50% 50% 30%' },
+          '70%': { borderRadius: '50% 50% 34% 66% / 56% 68% 32% 44%' },
+          '84%': { borderRadius: '46% 54% 50% 50% / 35% 61% 39% 65%' },
+        },
+        transform8s: {
+          '0%, 100%': { borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%' },
+          '14%': { borderRadius: '40% 60% 54% 46% / 49% 60% 40% 51%' },
+          '28%': { borderRadius: '54% 46% 38% 62% / 49% 70% 30% 51%' },
+          '42%': { borderRadius: '61% 39% 55% 45% / 61% 38% 62% 39%' },
+          '56%': { borderRadius: '61% 39% 67% 33% / 70% 50% 50% 30%' },
+          '70%': { borderRadius: '50% 50% 34% 66% / 56% 68% 32% 44%' },
+          '84%': { borderRadius: '46% 54% 50% 50% / 35% 61% 39% 65%' },
+        }
+      },
+      animation: {
+        'movement': 'movement 4s ease-in-out infinite both',
+        'transform': 'transform 17s ease-in-out infinite both alternate',
+        'transform3s': 'transform 17s ease-in-out infinite both alternate 3s',
+        'transform8s': 'transform 17s ease-in-out infinite both alternate 8s',
       },
       textFillColor: theme => theme('borderColor'),
       textStrokeColor: theme => theme('borderColor'),

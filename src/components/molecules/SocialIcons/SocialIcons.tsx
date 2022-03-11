@@ -1,11 +1,6 @@
 import React from 'react';
 
-import {
-  GithubIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  MaltIcon,
-} from '@/assets/icons';
+import { GithubIcon, LinkedinIcon, MaltIcon } from '@/assets/icons';
 import { COLORS } from '@/constants/Colors';
 
 // export type SocialIconType = {
@@ -37,6 +32,7 @@ import { COLORS } from '@/constants/Colors';
 //   },
 // ];
 
+// FIXME: Replace with Icon.tsx
 export const SocialIcons = () => {
   // const renderedSocialIcons = socialIcons.map((icon) => {
   //   return <SocialIcon type={icon.icon} key={icon.label} {...icon} />;
@@ -75,7 +71,7 @@ export const SocialIcons = () => {
           className="transition-all duration-300 hover:fill-tomato"
         />
       </a>
-      <a
+      {/* <a
         href="https://www.instagram.com/sukhakulii/"
         target="_blank"
         rel="noreferrer"
@@ -84,7 +80,7 @@ export const SocialIcons = () => {
           fill={COLORS.orange.DEFAULT}
           className="transition-all duration-300 hover:fill-tomato"
         />
-      </a>
+      </a> */}
     </div>
   );
 };

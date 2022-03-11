@@ -15,7 +15,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   };
 
   return (
-    <main className="relative h-full bg-purple-dark">
+    <main className="relative h-full">
       <Menu isMenuOpen={isMenuOpen} />
       <NavButton onToggleMenu={onToggleMenu} />
       {children}
