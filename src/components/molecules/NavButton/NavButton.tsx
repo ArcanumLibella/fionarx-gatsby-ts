@@ -16,7 +16,7 @@ export const NavButton = ({ toggleMenu }: NavButtonProps) => {
       role="button"
       aria-hidden="true"
     >
-      <span className="flex items-center justify-center p-2 font-bold border rounded-full font-brother w-14 h-14 text-tiny md:justify-start md:items-start md:flex-1 bg-midnight border-purple-light md:border-none md:bg-none">
+      <span className="flex items-center justify-center p-2 font-bold border-2 rounded-full font-brother w-14 h-14 text-tiny md:justify-start md:items-start md:flex-1 border-purple-light md:border-none">
         MENU
       </span>
       <div className="items-center justify-end flex-1 hidden w-12 md:flex">
