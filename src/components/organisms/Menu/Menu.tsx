@@ -1,11 +1,9 @@
+import { AnimatePresence, motion, useCycle } from 'framer-motion';
 import React from 'react';
 
-import { MenuItem } from '../../atoms/MenuItem';
+import { NavButton } from '@/components/molecules/NavButton';
 
-type MenuProps = {
-  isMenuOpen: boolean;
-  // onToggleMenu: () => void;
-};
+import { MenuItem } from '../../atoms/MenuItem';
 
 export type MenuItemType = {
   label: string;
@@ -31,31 +29,71 @@ const menuItems: MenuItemType[] = [
   },
 ];
 
-export const Menu = ({ isMenuOpen /* , onToggleMenu  */ }: MenuProps) => {
-  // const handleCloseMenu = () => {
-  //   onToggleMenu();
-  // };
+const menuItemsVariants = {
+  closed: {
+    transition: {
+      staggerChildren: 0.2,
+      staggerDirection: -1,
+    },
+  },
+  open: {
+    transition: {
+      staggerChildren: 0.2,
+      staggerDirection: 1,
+    },
+  },
+};
 
-  const renderedMenuItems = menuItems.map((item) => {
-    return <MenuItem key={item.label} {...item} />;
-  });
+const menuItemVariants = {
+  closed: {
+    translateX: '-10%',
+    opacity: 0,
+  },
+  open: {
+    translateX: '20%',
+    opacity: 1,
+  },
+};
+
+export const Menu = () => {
+  const [open, cycleOpen] = useCycle(false, true);
 
   return (
     // TODO: Style menu + add close menu if click outside (useRef ?)
-    <div
-      // onClick={handleCloseMenu}
-      className={`Menu flex justify-between absolute w-full lg:w-8/12 z-50 transition-all ease-out duration-300 cursor-pointer ${
-        isMenuOpen ? 'left-0' : '-left-full lg:-left-2/3'
-      }`}
-      // role="button"
-      // aria-hidden="true"
-    >
-      <div className="flex items-center flex-1 h-screen px-20 py-16 bg-twilight">
-        <nav className="flex flex-col justify-center ml-32">
-          {renderedMenuItems}
-        </nav>
-      </div>
-      {/* <NavButton onToggleMenu={onToggleMenu} /> */}
+    <div>
+      <NavButton toggleMenu={cycleOpen} />
+      <AnimatePresence>
+        {open && (
+          <motion.nav
+            key="menuAside"
+            initial={{ width: '0%' }}
+            animate={{ width: '100%' }}
+            exit={{ width: '0%', transition: { delay: 0.7, duration: 0.3 } }}
+            className="absolute z-50 flex justify-between xl:max-w-8/12"
+          >
+            <motion.ul
+              className="flex flex-col justify-center w-full h-screen py-16 bg-twilight"
+              key="menuUl"
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={menuItemsVariants}
+            >
+              {menuItems.map((item) => {
+                return (
+                  <motion.li
+                    key={item.label}
+                    variants={menuItemVariants}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <MenuItem {...item} />
+                  </motion.li>
+                );
+              })}
+            </motion.ul>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
