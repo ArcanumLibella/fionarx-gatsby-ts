@@ -39,6 +39,7 @@ export const SocialIcons = () => {
   // });
 
   return (
+    // FIXME: Add social icons on mobile
     <div className="flex-col justify-end flex-1 hidden gap-3 md:flex">
       {/* {renderedSocialIcons} */}
       <a

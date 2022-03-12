@@ -3,11 +3,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    // screens: {
+    //   'xxl': '1920px', // For very large screens
+    // },
     extend: {
       colors: {
         purple: {
           ultraDark: '#1A0035',
-          // ultraDark: '#210044',
           dark: '#3C0D6E',
           DEFAULT: '#410087',
           light: '#7729CC',
@@ -53,6 +55,7 @@ module.exports = {
       },
       width: {
         12: '48px',
+        54: '216px',
       },
       zIndex: {
         100: 100
