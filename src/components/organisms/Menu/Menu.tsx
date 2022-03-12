@@ -86,7 +86,7 @@ export const Menu = () => {
                     variants={menuItemVariants}
                     whileHover={{ scale: 1.05 }}
                   >
-                    <MenuItem {...item} />
+                    <MenuItem toggleMenu={cycleOpen} {...item} />
                   </motion.li>
                 );
               })}
