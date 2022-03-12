@@ -57,13 +57,14 @@ export const ProjectCard = ({ height }: ProjectCardProps) => {
         // exit={{ scale: 1, transition: { delay: 0.7, duration: 0.3 } }}
         // variants={cardVariants}
         whileHover={{ scale: 1.1, transition: { when: 'afterChildren' } }}
-        className={`relative h-full cursor-pointer max-h-[80vh]
-          h-${height}
-        `}
+        className="relative h-screen cursor-pointer max-h-[80vh]"
       >
         <Link
           to="/projects/project-name"
-          className="flex items-center justify-center h-full w-[70vw] xl:w-[20vw] max-w-[480px] bg-purple"
+          className={`
+            flex items-center justify-center w-[70vw] xl:w-[20vw] max-w-[480px] bg-purple
+            h-full h-${height}
+          `}
         >
           <motion.h2
             variants={titleVariants}
