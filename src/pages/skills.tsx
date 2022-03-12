@@ -4,7 +4,7 @@ import { ProjectCard } from '@/components/organisms/ProjectCard';
 
 const SkillsPage = () => {
   return (
-    <div className="flex items-center justify-center h-screen py-4 overflow-hidden md:py-8 md:pl-20 bg-midnight">
+    <div className="flex items-center justify-center h-screen min-h-screen py-4 overflow-hidden md:py-8 md:pl-20 bg-midnight">
       <div className="flex items-center h-full gap-12 px-8 overflow-x-scroll xl:gap-[6vw] md:px-24 xl:px-32">
         {/* FIXME:
           Add dynamic height 
