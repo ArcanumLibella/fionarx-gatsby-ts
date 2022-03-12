@@ -9956,6 +9956,11 @@ posix-character-classes@^0.1.0:
   resolved "https://registry.npmjs.org/posix-character-classes/-/posix-character-classes-0.1.1.tgz"
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
 
+postcss-100vh-fix@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-100vh-fix/-/postcss-100vh-fix-1.0.2.tgz#d7931b1b9db90c1ea9cafefeb444ad5e534f7550"
+  integrity sha512-t7vqk9AfjI4fXmWlQCEiMZFFhi1hro4WlECINI1TV6Qh1XapUJE++gCmNr95F5Hen/+bz1OmO+SiSB9TZmFmSg==
+
 postcss-calc@^8.2.3:
   version "8.2.4"
   resolved "https://registry.npmjs.org/postcss-calc/-/postcss-calc-8.2.4.tgz"
