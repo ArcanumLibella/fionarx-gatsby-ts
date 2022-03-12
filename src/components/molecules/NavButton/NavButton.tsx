@@ -22,7 +22,7 @@ export const NavButton = ({ toggleMenu }: NavButtonProps) => {
       <div className="items-center justify-end flex-1 hidden w-12 md:flex">
         <BurgerIcon />
       </div>
-      <SocialIcons />
+      <SocialIcons className="flex-col justify-end flex-1 hidden gap-3 md:flex" />
     </div>
   );
 };

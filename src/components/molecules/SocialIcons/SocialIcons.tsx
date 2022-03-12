@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 
 import { GithubIcon, LinkedinIcon, MaltIcon } from '@/assets/icons';
 import { COLORS } from '@/constants/Colors';
+
+type SocialIconProps = {
+  className: HTMLAttributes<HTMLImageElement>['className'];
+};
 
 // export type SocialIconType = {
 //   label: string;
@@ -33,14 +37,15 @@ import { COLORS } from '@/constants/Colors';
 // ];
 
 // FIXME: Replace with Icon.tsx
-export const SocialIcons = () => {
+export const SocialIcons = ({
+  className: additionalStyle,
+}: SocialIconProps) => {
   // const renderedSocialIcons = socialIcons.map((icon) => {
   //   return <SocialIcon type={icon.icon} key={icon.label} {...icon} />;
   // });
 
   return (
-    // FIXME: Add social icons on mobile
-    <div className="flex-col justify-end flex-1 hidden gap-3 md:flex">
+    <div className={additionalStyle}>
       {/* {renderedSocialIcons} */}
       <a
         href="https://www.malt.fr/profile/fionaroux"
