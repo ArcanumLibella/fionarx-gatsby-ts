@@ -3,8 +3,10 @@ import { useCallback, useEffect, useState } from 'react';
 
 import { BREAKPOINTS } from '@/constants/Breakpoints';
 
+const isBrowser = () => typeof window !== 'undefined';
+
 export function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
+  const { innerWidth: width, innerHeight: height } = isBrowser() && window;
   return {
     width,
     height,
@@ -23,8 +25,11 @@ export const useWindowSize = () => {
   const debouncedFunction = debounce(handleResize, 300);
 
   useEffect(() => {
-    window.addEventListener('resize', debouncedFunction);
-    return () => window.removeEventListener('resize', debouncedFunction);
+    if (isBrowser()) {
+      window.addEventListener('resize', debouncedFunction);
+      return () => window.removeEventListener('resize', debouncedFunction);
+    }
+    return null;
   }, []);
 
   return windowDimensions;
