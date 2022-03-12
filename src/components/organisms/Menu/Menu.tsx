@@ -50,7 +50,7 @@ const menuItemVariants = {
     opacity: 0,
   },
   open: {
-    translateX: '20%',
+    translateX: '15%',
     opacity: 1,
   },
 };
@@ -69,10 +69,10 @@ export const Menu = () => {
             initial={{ width: '0%' }}
             animate={{ width: '100%' }}
             exit={{ width: '0%', transition: { delay: 0.7, duration: 0.3 } }}
-            className="absolute z-50 flex justify-between xl:max-w-8/12"
+            className="absolute z-50 flex justify-between overflow-hidden xl:max-w-8/12"
           >
             <motion.ul
-              className="flex flex-col justify-center w-full h-screen py-16 bg-twilight"
+              className="flex flex-col justify-center w-full h-screen bg-twilight md:ml-12"
               key="menuUl"
               initial="closed"
               animate="open"

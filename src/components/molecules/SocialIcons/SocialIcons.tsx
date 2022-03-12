@@ -39,7 +39,7 @@ export const SocialIcons = () => {
   // });
 
   return (
-    <div className="flex flex-col justify-end flex-1 gap-3">
+    <div className="flex-col justify-end flex-1 hidden gap-3 md:flex">
       {/* {renderedSocialIcons} */}
       <a
         href="https://www.malt.fr/profile/fionaroux"
