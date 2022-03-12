@@ -1,5 +1,3 @@
-// const defaultTheme = require('tailwindcss/defaultTheme');
-
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -29,7 +27,6 @@ module.exports = {
         brother: ['Brother', 'Impact', 'sans-serif'],
         goku: ['Goku', 'Impact', 'sans-serif'],
         body: ['Josefin Sans', 'sans-serif'],
-        // body: ['Josefin Sans', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
         xxs: '.5rem', // 8px
@@ -47,6 +44,9 @@ module.exports = {
       backgroundImage: {
         'midnight': "linear-gradient(to bottom left, #210044, #3C0D6E, #1A0035)",
         'twilight': "linear-gradient(81.95deg, #410087 -30.67%, #E94057 43.66%, #F27121 96.52%)",
+      },
+      maxWidth: {
+        '8/12': '66%'
       },
       height: {
         12: '48px',

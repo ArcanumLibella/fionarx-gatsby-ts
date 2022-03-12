@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { NavButton } from '@/components/molecules/NavButton';
 import { Menu } from '@/components/organisms/Menu';
 
 type MainLayoutProps = {
@@ -8,18 +7,14 @@ type MainLayoutProps = {
 };
 
 const MainLayout = ({ children }: MainLayoutProps) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const onToggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
-    <main className="relative h-full">
-      <Menu isMenuOpen={isMenuOpen} />
-      <NavButton onToggleMenu={onToggleMenu} />
-      {children}
-    </main>
+    <>
+      <title>Fiona Roux | Développeur front-end</title>
+      <main className="relative h-full">
+        <Menu />
+        {children}
+      </main>
+    </>
   );
 };
 

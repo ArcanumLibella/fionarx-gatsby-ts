@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 
-import { Blobs } from '@/components/atoms/Blobs';
+import { Blobs } from '@/components/organisms/Blobs';
 
 export const Hero = () => {
   // FIXME: Review style hero
