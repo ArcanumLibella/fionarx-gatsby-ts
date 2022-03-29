@@ -53,7 +53,7 @@ export const SocialIcons = ({
         rel="noreferrer"
       >
         <MaltIcon
-          fill={COLORS.orange.DEFAULT}
+          fill={COLORS.white.DEFAULT}
           className="transition-all duration-300 hover:fill-tomato"
         />
       </a>
@@ -63,7 +63,7 @@ export const SocialIcons = ({
         rel="noreferrer"
       >
         <LinkedinIcon
-          fill={COLORS.orange.DEFAULT}
+          fill={COLORS.white.DEFAULT}
           className="transition-all duration-300 hover:fill-tomato"
         />
       </a>
@@ -73,7 +73,7 @@ export const SocialIcons = ({
         rel="noreferrer"
       >
         <GithubIcon
-          fill={COLORS.orange.DEFAULT}
+          fill={COLORS.white.DEFAULT}
           className="transition-all duration-300 hover:fill-tomato"
         />
       </a>
@@ -83,7 +83,7 @@ export const SocialIcons = ({
         rel="noreferrer"
       >
         <InstagramIcon
-          fill={COLORS.orange.DEFAULT}
+          fill={COLORS.white.DEFAULT}
           className="transition-all duration-300 hover:fill-tomato"
         />
       </a> */}
