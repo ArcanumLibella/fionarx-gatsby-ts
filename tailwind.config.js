@@ -38,7 +38,7 @@ module.exports = {
         base: '1rem', // 16px
         md: '1.125rem', // 18px
         lg: '2rem', // 32px
-        // xl: '8vw',
+        xl: '5rem', // 80px
         // '2xl': '8vh',
         // '3xl': '10vh',
         // '4xl': '12vh',

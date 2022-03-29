@@ -36,6 +36,7 @@
     "prettier/prettier": "error",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
+    "react/require-default-props": "off",
     "react/jsx-filename-extension": "off",
     "react/jsx-props-no-spreading": "off",
     "import/no-extraneous-dependencies": [
@@ -90,7 +91,7 @@
       }
     ],
     "arrow-body-style": ["off", "always"],
-    "prefer-arrow-callback": "off"
+    "prefer-arrow-callback": "off",
   },
   "overrides": [
     {
