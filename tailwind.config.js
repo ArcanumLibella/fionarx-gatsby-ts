@@ -43,6 +43,9 @@ module.exports = {
         // '3xl': '10vh',
         // '4xl': '12vh',
       },
+      letterSpacing: {
+        tightest: '-0.5rem', //-8px
+      },
       backgroundImage: {
         'midnight': "linear-gradient(to bottom left, #210044, #3C0D6E, #1A0035)",
         'twilight': "linear-gradient(81.95deg, #410087 -30.67%, #E94057 43.66%, #F27121 96.52%)",

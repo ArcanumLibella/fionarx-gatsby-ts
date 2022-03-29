@@ -31,30 +31,30 @@ export const Text = ({
     case 'mainTitle':
       return (
         <h2
-          className={`font-brother font-black md:text-xl tracking-wide ${additionalStyle}`}
+          className={`font-brother font-black md:text-xl tracking-tightest ${additionalStyle}`}
         >
           {children}
         </h2>
       );
     case 'title':
       return (
-        <h3 className={`font-display font-bold text-2xl ${additionalStyle}`}>
+        <h3
+          className={`font-brother font-medium md:text-xl tracking-tightest ${additionalStyle}`}
+        >
           {children}
         </h3>
       );
     case 'subtitle':
       return (
         <h4
-          className={`font-display font-bold md:text-2xl text-1.25xl ${additionalStyle}`}
+          className={`font-brother font-extrabold md:text-md ${additionalStyle}`}
         >
           {children}
         </h4>
       );
     case 'paragraph':
       return (
-        <p
-          className={`font-display font-bold md:text-slg text-lg ${additionalStyle}`}
-        >
+        <p className={`font-body font-regular md:text-base ${additionalStyle}`}>
           {children}
         </p>
       );
