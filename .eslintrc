@@ -91,7 +91,7 @@
       }
     ],
     "arrow-body-style": ["off", "always"],
-    "prefer-arrow-callback": "off",
+    "prefer-arrow-callback": "off"
   },
   "overrides": [
     {
@@ -124,7 +124,7 @@
             ]
           }
         ],
-        "quotes": 1,
+        // "quotes": 1,
         "@typescript-eslint/no-unused-vars": [2, { "argsIgnorePattern": "^_" }]
       }
     }
