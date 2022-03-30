@@ -23,10 +23,6 @@ const menuItems: MenuItemType[] = [
     path: '/about',
   },
   {
-    label: 'Skills',
-    path: '/skills',
-  },
-  {
     label: 'Contact',
     path: '/contact',
   },
@@ -91,7 +87,7 @@ export const Menu = () => {
             className="absolute z-40 overflow-hidden xl:max-w-8/12"
           >
             <motion.ul
-              className="flex flex-col justify-center w-full h-screen bg-twilight md:ml-12"
+              className="flex flex-col justify-center w-full h-screen bg-twilight md:ml-20"
               key="menuUl"
               initial="closed"
               animate="open"

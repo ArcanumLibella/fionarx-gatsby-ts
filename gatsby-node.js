@@ -1,4 +1,5 @@
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+/* eslint-disable @typescript-eslint/no-var-requires */
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({

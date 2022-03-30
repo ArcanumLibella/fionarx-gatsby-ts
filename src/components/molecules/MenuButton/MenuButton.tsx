@@ -18,7 +18,7 @@ export const MenuButton = () /* : MenuButtonProps  */ => {
     // TODO: Add burger menu
     <button
       type="button"
-      className="flex items-center justify-center h-8 w-8 bg-tomato cursor-pointer"
+      className="flex items-center justify-center w-8 h-8 cursor-pointer bg-tomato"
       onClick={handleMenuOpen}
     >
       X

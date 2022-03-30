@@ -1,14 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
 
-// import { MenuItemType } from '@/components/organisms/Menu/Menu';
-
-// export type MenuItemProps = MenuItemType;
-
-// type MenuItemProps = {
-//   toggleMenu: () => void;
-// };
-
 export const MenuItem = ({ label, path, toggleMenu }) => {
   const handleCloseMenu = () => {
     toggleMenu();

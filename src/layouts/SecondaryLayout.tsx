@@ -10,7 +10,7 @@ const SecondaryLayout = ({ children, title }: SecondaryLayoutProps) => {
   return (
     <div className="flex justify-end pt-48 pr-20">
       <div className="max-w-layout">
-        <Text type="mainTitle" className="text-tomato mb-10">
+        <Text type="mainTitle" className="mb-10 text-tomato">
           {title}
         </Text>
         {children}

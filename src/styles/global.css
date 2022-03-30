@@ -4,85 +4,89 @@
 
 /* GLOBAL STYLE */
 html {
-    @apply font-body;
-    @apply text-white;
-    @apply bg-purple-ultraDark;
-    height: -webkit-fill-available;
+  @apply font-body;
+  @apply text-white;
+  @apply bg-purple-ultraDark;
+  height: -webkit-fill-available;
 }
 
 body {
-    max-height: 100vh;
-    /* mobile viewport bug fix */
-    min-height: -webkit-fill-available;
+  max-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
 }
 
 /* Avoid Chrome to see Safari hack */
 @supports (-webkit-touch-callout: none) {
-    body {
-      /* The hack for Safari */
-      height: -webkit-fill-available;
-    }
+  body {
+    /* The hack for Safari */
+    height: -webkit-fill-available;
   }
+}
+
+strong {
+  @apply text-tomato;
+}
 
 /* FONTS IMPORT */
 @font-face {
-    font-family: 'Brother';
-    src: url('../assets/fonts/brother-1816-black-webfont.woff2') format('woff2'),
-         url('../assets/fonts/brother-1816-black-webfont.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
+  font-family: 'Brother';
+  src: url('../assets/fonts/brother-1816-black-webfont.woff2') format('woff2'),
+        url('../assets/fonts/brother-1816-black-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Brother';
-    src: url('../assets/fonts/brother-1816-bold-webfont.woff2') format('woff2'),
-         url('../assets/fonts/brother-1816-bold-webfont.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'Brother';
+  src: url('../assets/fonts/brother-1816-bold-webfont.woff2') format('woff2'),
+        url('../assets/fonts/brother-1816-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Brother';
-    src: url('../assets/fonts/brother-1816-medium-webfont.woff2') format('woff2'),
-         url('../assets/fonts/brother-1816-medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Brother';
+  src: url('../assets/fonts/brother-1816-medium-webfont.woff2') format('woff2'),
+        url('../assets/fonts/brother-1816-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Goku';
-    src: url('../assets/fonts/goku-webfont.woff2') format('woff2'),
-         url('../assets/fonts/goku-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Goku';
+  src: url('../assets/fonts/goku-webfont.woff2') format('woff2'),
+        url('../assets/fonts/goku-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Josefin Sans';
-    src: url('../assets/fonts/JosefinSans-Light.woff2') format('woff2'),
-        url('../assets/fonts/JosefinSans-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Josefin Sans';
+  src: url('../assets/fonts/JosefinSans-Light.woff2') format('woff2'),
+      url('../assets/fonts/JosefinSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* STYLE OVERHIDE */
 
 .no-scroll-bar-div::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-  
+
 .no-scroll-bar-div {
-    scrollbar-width: none;
+  scrollbar-width: none;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .scrollbar-hidden::-webkit-scrollbar {
-    display: none;
-  }
-  
+  display: none;
+}
+
   /* Hide scrollbar for IE, Edge add Firefox */
   .scrollbar-hidden {
-    -ms-overflow-style: none;
-    scrollbar-width: none; /* Firefox */
-  }
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}

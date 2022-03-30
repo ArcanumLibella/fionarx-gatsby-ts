@@ -3,9 +3,6 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    // screens: {
-    //   'xxl': '1920px', // For very large screens
-    // },
     extend: {
       colors: {
         purple: {
@@ -39,9 +36,6 @@ module.exports = {
         md: '2rem', // 32px
         lg: '2.5rem', // 40px
         xl: '5rem', // 80px
-        // '2xl': '8vh',
-        // '3xl': '10vh',
-        // '4xl': '12vh',
       },
       letterSpacing: {
         tightest: '-0.5rem', // -8px
@@ -49,7 +43,7 @@ module.exports = {
         widest: '0.5rem', // 8px
       },
       backgroundImage: {
-        'midnight': "linear-gradient(to bottom left, #210044, #3C0D6E, #1A0035)",
+        'midnight': "linear-gradient(to bottom left, #1A0035, #3C0D6E, #1A0035)",
         'twilight': "linear-gradient(81.95deg, #410087 -30.67%, #E94057 43.66%, #F27121 96.52%)",
       },
       maxWidth: {

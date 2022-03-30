@@ -6,8 +6,8 @@ const AboutPage = () => {
   return (
     <SecondaryLayout title="About me">
       <Text type="title" className="mb-16">
-        My name is Fiona Roux, front-end developer and digital lover based next
-        to Paris.
+        My name is <strong>Fiona Roux</strong>, front-end developer and digital
+        lover based next to Paris.
       </Text>
       <Text type="paragraph" className="mb-8">
         What I love most about my job is being able to design and develop

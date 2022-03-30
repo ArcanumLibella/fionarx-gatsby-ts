@@ -10,7 +10,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
       <title>Fiona Roux | Développeur front-end</title>
-      <main className="relative h-screen">
+      <main className="relative h-screen bg-midnight">
         <Menu />
         {children}
       </main>

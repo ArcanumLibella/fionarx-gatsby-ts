@@ -12,7 +12,7 @@ export const NavButton = ({ toggleMenu }: NavButtonProps) => {
     <div className="absolute flex-col items-center justify-between bottom-2 right-2 md:bottom-0 md:left-0 md:w-20 md:h-screen md:flex z-100">
       <Link
         to="/"
-        className="hidden md:flex items-center justify-center font-bold font-brother w-20 h-20 text-tiny bg-tomato"
+        className="hidden w-20 h-20 font-bold transition-all duration-300 bg-transparent border-2 md:items-center md:justify-center md:flex hover:text-tomato font-brother text-tiny border-purple-ultraDark"
       >
         HOME
       </Link>
