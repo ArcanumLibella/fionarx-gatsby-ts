@@ -1,12 +1,11 @@
-import { AnimatePresence, motion, useCycle } from 'framer-motion';
-import React from 'react';
+import { AnimatePresence, motion, useCycle } from "framer-motion";
 
-import { GithubIcon, LinkedinIcon, MaltIcon } from '@/assets/icons';
-import { NavButton } from '@/components/molecules/NavButton';
-import { COLORS } from '@/constants/Colors';
-import { useIsMobile } from '@/utils/useWindowSize';
+import { GithubIcon, LinkedinIcon, MaltIcon } from "@/assets/icons";
+import { NavButton } from "@/components/molecules/NavButton";
+import { COLORS } from "@/constants/Colors";
+import { useIsMobile } from "@/utils/useWindowSize";
 
-import { MenuItem } from '../../atoms/MenuItem';
+import { MenuItem } from "../../atoms/MenuItem";
 
 export type MenuItemType = {
   label: string;
@@ -15,16 +14,20 @@ export type MenuItemType = {
 
 const menuItems: MenuItemType[] = [
   {
-    label: 'Projects',
-    path: '/projects',
+    label: "Projects",
+    path: "/projects",
   },
   {
-    label: 'About me',
-    path: '/about',
+    label: "Projects",
+    path: "/my-projects",
   },
   {
-    label: 'Contact',
-    path: '/contact',
+    label: "About me",
+    path: "/about",
+  },
+  {
+    label: "Contact",
+    path: "/contact",
   },
 ];
 
@@ -60,11 +63,11 @@ const socialItemsVariants = {
 
 const menuItemVariants = {
   closed: {
-    translateX: '-10%',
+    translateX: "-10%",
     opacity: 0,
   },
   open: {
-    translateX: '15%',
+    translateX: "15%",
     opacity: 1,
   },
 };
@@ -81,9 +84,9 @@ export const Menu = () => {
         {open && (
           <motion.nav
             key="menuAside"
-            initial={{ width: '0%' }}
-            animate={{ width: '100%' }}
-            exit={{ width: '0%', transition: { delay: 0.7, duration: 0.3 } }}
+            initial={{ width: "0%" }}
+            animate={{ width: "100%" }}
+            exit={{ width: "0%", transition: { delay: 0.7, duration: 0.3 } }}
             className="absolute z-40 overflow-hidden xl:max-w-8/12"
           >
             <motion.ul

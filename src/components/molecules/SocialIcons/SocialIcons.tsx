@@ -1,10 +1,10 @@
-import React, { HTMLAttributes } from 'react';
+import { HTMLAttributes } from "react";
 
-import { GithubIcon, LinkedinIcon, MaltIcon } from '@/assets/icons';
-import { COLORS } from '@/constants/Colors';
+import { GithubIcon, LinkedinIcon, MaltIcon } from "@/assets/icons";
+import { COLORS } from "@/constants/Colors";
 
 type SocialIconProps = {
-  className: HTMLAttributes<HTMLImageElement>['className'];
+  className: HTMLAttributes<HTMLImageElement>["className"];
 };
 
 // export type SocialIconType = {

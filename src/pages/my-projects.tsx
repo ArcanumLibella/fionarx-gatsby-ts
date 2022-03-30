@@ -1,9 +1,9 @@
 import { ProjectCard } from "@/components/organisms/ProjectCard";
 
-const ProjectsPage = () => {
+const MyProjectsPage = () => {
   return (
-    <div className="flex items-center justify-center h-screen min-h-screen py-4 overflow-hidden md:py-8 md:pl-20 bg-midnight">
-      <div className="flex items-center h-screen min-h-screen gap-12 px-8 overflow-x-auto xl:gap-[6vw] md:px-24 xl:px-32">
+    <div className="flex items-center justify-center h-screen min-h-full overflow-hidden md:pl-20 bg-midnight">
+      <div className="flex items-center h-screen min-h-full gap-12 px-8 overflow-x-auto xl:gap-[6vw] md:px-24 xl:px-32">
         {/* FIXME:
           Add dynamic height
           Remove scroll bar
@@ -20,4 +20,4 @@ const ProjectsPage = () => {
   );
 };
 
-export default ProjectsPage;
+export default MyProjectsPage;

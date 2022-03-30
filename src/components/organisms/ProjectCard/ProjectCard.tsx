@@ -1,8 +1,7 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import { Link } from 'gatsby';
-import React from 'react';
+import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "gatsby";
 
-import { COLORS } from '@/constants/Colors';
+import { COLORS } from "@/constants/Colors";
 
 type ProjectCardProps = {
   height: string;
@@ -34,7 +33,7 @@ const descriptionVariants = {
     opacity: 1,
     bottom: 0,
     transition: {
-      type: 'spring',
+      type: "spring",
       duration: 0.3,
     },
   },
@@ -56,7 +55,7 @@ export const ProjectCard = ({ height }: ProjectCardProps) => {
         // animate="end"
         // exit={{ scale: 1, transition: { delay: 0.7, duration: 0.3 } }}
         // variants={cardVariants}
-        whileHover={{ scale: 1.1, transition: { when: 'afterChildren' } }}
+        whileHover={{ scale: 1.05, transition: { when: "afterChildren" } }}
         className="relative h-full cursor-pointer max-h-[80vh]"
       >
         <Link

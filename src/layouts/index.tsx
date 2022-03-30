@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { Menu } from '@/components/organisms/Menu';
+import { Menu } from "@/components/organisms/Menu";
 
 type MainLayoutProps = {
   children: React.ReactNode;
@@ -10,7 +10,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
       <title>Fiona Roux | Développeur front-end</title>
-      <main className="relative h-screen bg-midnight">
+      <main className="relative h-screen overflow-auto bg-midnight">
         <Menu />
         {children}
       </main>

@@ -1,5 +1,4 @@
-import { Link } from 'gatsby';
-import React from 'react';
+import { Link } from "gatsby";
 
 export const MenuItem = ({ label, path, toggleMenu }) => {
   const handleCloseMenu = () => {

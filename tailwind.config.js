@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
@@ -32,6 +33,7 @@ module.exports = {
         xs: '.625rem', // 10px
         tiny: '.75rem', // 12px
         sm: '.875rem', // 14px
+        normal: '1rem', // 16rem
         base: '1.25rem', // 20px
         md: '2rem', // 32px
         lg: '2.5rem', // 40px
@@ -47,6 +49,7 @@ module.exports = {
         'twilight': "linear-gradient(81.95deg, #410087 -30.67%, #E94057 43.66%, #F27121 96.52%)",
       },
       maxWidth: {
+        '4/12': '33%',
         '8/12': '66%',
         'layout': '800px',
       },
@@ -56,6 +59,10 @@ module.exports = {
       width: {
         12: '48px',
         54: '216px',
+      },
+      spacing: {
+        '1/10': '10%',
+        '1/5': '20%',
       },
       zIndex: {
         100: 100
@@ -84,6 +91,15 @@ module.exports = {
           '70%': { borderRadius: '50% 50% 34% 66% / 56% 68% 32% 44%' },
           '84%': { borderRadius: '46% 54% 50% 50% / 35% 61% 39% 65%' },
         },
+        transform5s: {
+          '0%, 100%': { borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%' },
+          '14%': { borderRadius: '40% 60% 54% 46% / 49% 60% 40% 51%' },
+          '28%': { borderRadius: '54% 46% 38% 62% / 49% 70% 30% 51%' },
+          '42%': { borderRadius: '61% 39% 55% 45% / 61% 38% 62% 39%' },
+          '56%': { borderRadius: '61% 39% 67% 33% / 70% 50% 50% 30%' },
+          '70%': { borderRadius: '50% 50% 34% 66% / 56% 68% 32% 44%' },
+          '84%': { borderRadius: '46% 54% 50% 50% / 35% 61% 39% 65%' },
+        },
         transform8s: {
           '0%, 100%': { borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%' },
           '14%': { borderRadius: '40% 60% 54% 46% / 49% 60% 40% 51%' },
@@ -98,6 +114,7 @@ module.exports = {
         'movement': 'movement 4s ease-in-out infinite both',
         'transform': 'transform 17s ease-in-out infinite both alternate',
         'transform3s': 'transform 17s ease-in-out infinite both alternate 3s',
+        'transform5s': 'transform 17s ease-in-out infinite both alternate 5s',
         'transform8s': 'transform 17s ease-in-out infinite both alternate 8s',
       },
       textFillColor: theme => theme('borderColor'),

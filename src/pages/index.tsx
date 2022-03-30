@@ -1,6 +1,4 @@
-import React from 'react';
-
-import { Hero } from '@/components/organisms/Hero';
+import { Hero } from "@/components/organisms/Hero";
 
 const HomePage = () => {
   return <Hero />;
