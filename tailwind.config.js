@@ -35,23 +35,26 @@ module.exports = {
         xs: '.625rem', // 10px
         tiny: '.75rem', // 12px
         sm: '.875rem', // 14px
-        base: '1rem', // 16px
-        md: '1.125rem', // 18px
-        lg: '2rem', // 32px
+        base: '1.25rem', // 20px
+        md: '2rem', // 32px
+        lg: '2.5rem', // 40px
         xl: '5rem', // 80px
         // '2xl': '8vh',
         // '3xl': '10vh',
         // '4xl': '12vh',
       },
       letterSpacing: {
-        tightest: '-0.5rem', //-8px
+        tightest: '-0.5rem', // -8px
+        tight: '-0.2rem', // -2px
+        widest: '0.5rem', // 8px
       },
       backgroundImage: {
         'midnight': "linear-gradient(to bottom left, #210044, #3C0D6E, #1A0035)",
         'twilight': "linear-gradient(81.95deg, #410087 -30.67%, #E94057 43.66%, #F27121 96.52%)",
       },
       maxWidth: {
-        '8/12': '66%'
+        '8/12': '66%',
+        'layout': '800px',
       },
       height: {
         12: '48px',
