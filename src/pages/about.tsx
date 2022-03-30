@@ -115,14 +115,14 @@ const AboutPage = () => {
         choice of their graphic identity to putting it online.
       </Text>
       <Separator />
-      <Text type="subtitle" className="mb-16">
+      <Text type="subtitle" className="mb-12 md:mb-16">
         Services.
       </Text>
-      <div className="flex gap-10">
+      <div className="flex gap-8 px-4 mb-12 -mx-4 overflow-x-auto md:px-0 scroll-pr-6 scroll-mr-8 md:mr-0 md:gap-10">
         <CardsService />
       </div>
       <Separator />
-      <Text type="subtitle" className="mb-16">
+      <Text type="subtitle" className="mb-12 md:mb-16">
         Technical stack.
       </Text>
       <Text type="paragraph" className="mb-8">
@@ -132,7 +132,7 @@ const AboutPage = () => {
         For the back office I use <strong>Strapi</strong>, an open-source
         headless CMS known for its flexibility and ease of use.
       </Text>
-      <div className="flex flex-col flex-wrap mb-16 max-h-40">
+      <div className="flex-col flex-wrap mb-12 md:mb-16 md:flex md:max-h-40">
         {techItems.map((item) => {
           return (
             <Text key={item.id} type="paragraphLight">

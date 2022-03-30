@@ -32,17 +32,21 @@ module.exports = {
         body: ['Josefin Sans', 'sans-serif'],
       },
       fontSize: {
-        xxs: '.5rem', // 8px
-        xs: '.625rem', // 10px
+        // xxs: '.5rem', // 8px
+        // xs: '.625rem', // 10px
         tiny: '.75rem', // 12px
-        sm: '.875rem', // 14px
+        // sm: '.875rem', // 14px
         normal: '1rem', // 16rem
+        "mbase": '.875rem', // 14px
         base: '1.25rem', // 20px
         "xbase": '1.5rem', // 24px
+        "mmd": '1.5rem', // 24px
         md: '2rem', // 32px
         "xmd": '2.25rem', // 36px
+        "mlg": '1.5rem', // 24px
         lg: '2.5rem', // 40px
         "xlg": '3.5rem', // 56px
+        "mxl": '2rem', // 32px
         xl: '5rem', // 80px
         "xxl": '8rem', // 128px
       },
@@ -54,6 +58,9 @@ module.exports = {
       backgroundImage: {
         'midnight': "linear-gradient(to bottom left, #1A0035, #3C0D6E, #1A0035)",
         'twilight': "linear-gradient(81.95deg, #410087 -30.67%, #E94057 43.66%, #F27121 96.52%)",
+      },
+      minWidth: {
+        '240': '240px',
       },
       maxWidth: {
         '4/12': '33%',

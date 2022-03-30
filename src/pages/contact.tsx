@@ -14,7 +14,7 @@ const ContactPage = () => {
         <AtIcon />
         <Text
           type="custom"
-          className="ml-4 font-black tracking-wide font-brother md:text-lg 2xl:text-xlg text-tomato"
+          className="ml-4 font-black tracking-wide font-brother text-mlg md:text-lg 2xl:text-xlg text-tomato"
         >
           hello@fionarx.io
         </Text>
