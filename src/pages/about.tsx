@@ -116,7 +116,7 @@ const AboutPage = () => {
       </Text>
       <Separator />
       <Text type="subtitle" className="mb-16">
-        SERVICES.
+        Services.
       </Text>
       <div className="flex gap-10">
         <CardsService />

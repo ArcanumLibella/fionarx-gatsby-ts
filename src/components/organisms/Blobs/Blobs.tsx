@@ -5,7 +5,7 @@ type BlobsProps = {
 };
 export const Blobs = ({ className }: BlobsProps) => {
   return (
-    <div className={className}>
+    <div className={`${className} z-0`}>
       <div className="absolute w-full h-full animate-movement animate-transform bg-twilight" />
       <div className="absolute w-[104%] h-[104%] animate-movement animate-transform bg-transparent border-4 border-purple blur-lg" />
       <div className="absolute w-[96%] h-[96%] animate-movement animate-transform3s bg-transparent border border-purple-ultraLight" />

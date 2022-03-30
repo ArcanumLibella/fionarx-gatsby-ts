@@ -32,7 +32,7 @@ export const Text = ({
     case "mainTitle":
       return (
         <h2
-          className={`font-brother font-black md:text-xl tracking-tightest uppercase selection:bg-purple ${additionalStyle}`}
+          className={`font-brother font-black md:text-xl 2xl:text-xxl tracking-tightest uppercase selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h2>
@@ -40,7 +40,7 @@ export const Text = ({
     case "title":
       return (
         <h3
-          className={`font-brother font-medium md:text-lg tracking-tight selection:bg-purple ${additionalStyle}`}
+          className={`font-brother font-medium md:text-lg 2xl:text-xlg tracking-tight selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h3>
@@ -48,7 +48,7 @@ export const Text = ({
     case "subtitle":
       return (
         <h4
-          className={`font-brother font-extrabold md:text-md selection:bg-purple ${additionalStyle}`}
+          className={`font-brother font-extrabold md:text-md 2xl:text-xmd selection:bg-purple uppercase ${additionalStyle}`}
         >
           {children}
         </h4>
@@ -56,7 +56,7 @@ export const Text = ({
     case "paragraph":
       return (
         <p
-          className={`font-body md:text-base selection:bg-purple ${additionalStyle}`}
+          className={`font-body md:text-base 2xl:text-xbase selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </p>

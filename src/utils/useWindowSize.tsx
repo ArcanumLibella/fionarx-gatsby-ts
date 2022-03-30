@@ -1,9 +1,9 @@
-import { debounce } from 'lodash';
-import { useCallback, useEffect, useState } from 'react';
+import { debounce } from "lodash";
+import { useCallback, useEffect, useState } from "react";
 
-import { BREAKPOINTS } from '@/constants/Breakpoints';
+import { BREAKPOINTS } from "@/constants/Breakpoints";
 
-const isBrowser = () => typeof window !== 'undefined';
+const isBrowser = () => typeof window !== "undefined";
 
 export function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = isBrowser() && window;
@@ -26,8 +26,8 @@ export const useWindowSize = () => {
 
   useEffect(() => {
     if (isBrowser()) {
-      window.addEventListener('resize', debouncedFunction);
-      return () => window.removeEventListener('resize', debouncedFunction);
+      window.addEventListener("resize", debouncedFunction);
+      return () => window.removeEventListener("resize", debouncedFunction);
     }
     return null;
   }, []);

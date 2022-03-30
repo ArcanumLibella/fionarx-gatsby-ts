@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        '3xl': '1920px',
+      },
       colors: {
         purple: {
           ultraDark: '#1A0035',
@@ -35,9 +38,13 @@ module.exports = {
         sm: '.875rem', // 14px
         normal: '1rem', // 16rem
         base: '1.25rem', // 20px
+        "xbase": '1.5rem', // 24px
         md: '2rem', // 32px
+        "xmd": '2.25rem', // 36px
         lg: '2.5rem', // 40px
+        "xlg": '3.5rem', // 56px
         xl: '5rem', // 80px
+        "xxl": '8rem', // 128px
       },
       letterSpacing: {
         tightest: '-0.5rem', // -8px
@@ -51,7 +58,8 @@ module.exports = {
       maxWidth: {
         '4/12': '33%',
         '8/12': '66%',
-        'layout': '800px',
+        '800': '800px',
+        '1200': '1200px',
       },
       height: {
         12: '48px',
@@ -63,6 +71,7 @@ module.exports = {
       spacing: {
         '1/10': '10%',
         '1/5': '20%',
+        '2/5': '40%',
       },
       zIndex: {
         100: 100
