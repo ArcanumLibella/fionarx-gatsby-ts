@@ -6,7 +6,8 @@ type TextPossibleTypes =
   | 'mainTitle'
   | 'title'
   | 'subtitle'
-  | 'paragraph';
+  | 'paragraph'
+  | 'paragraphLight';
 
 export type TextProps = {
   children: React.ReactNode;
@@ -31,7 +32,7 @@ export const Text = ({
     case 'mainTitle':
       return (
         <h2
-          className={`font-brother font-black md:text-xl tracking-tightest ${additionalStyle}`}
+          className={`font-brother font-black md:text-xl tracking-tightest uppercase ${additionalStyle}`}
         >
           {children}
         </h2>
@@ -39,7 +40,7 @@ export const Text = ({
     case 'title':
       return (
         <h3
-          className={`font-brother font-medium md:text-xl tracking-tightest ${additionalStyle}`}
+          className={`font-brother font-medium md:text-lg tracking-tight ${additionalStyle}`}
         >
           {children}
         </h3>
@@ -55,6 +56,14 @@ export const Text = ({
     case 'paragraph':
       return (
         <p className={`font-body font-regular md:text-base ${additionalStyle}`}>
+          {children}
+        </p>
+      );
+    case 'paragraphLight':
+      return (
+        <p
+          className={`font-body font-light md:text-base tracking-widest ${additionalStyle}`}
+        >
           {children}
         </p>
       );
