@@ -11,7 +11,7 @@ const ContactPage = () => {
       </Text>
       <Separator />
       <a href="mailto:hello@fionarx.io" className="flex items-center">
-        <AtIcon />
+        <AtIcon width={36} />
         <Text
           type="custom"
           className="ml-4 font-black tracking-wide font-brother text-mlg md:text-lg 2xl:text-xlg text-tomato"
