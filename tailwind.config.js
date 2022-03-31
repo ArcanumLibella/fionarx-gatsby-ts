@@ -46,7 +46,7 @@ module.exports = {
         "mlg": '1.5rem', // 24px
         lg: '2.5rem', // 40px
         "xlg": '3.5rem', // 56px
-        "mxl": '2rem', // 32px
+        "mxl": '3rem', // 48px
         xl: '5rem', // 80px
         "xxl": '8rem', // 128px
       },
@@ -81,6 +81,7 @@ module.exports = {
         '2/5': '40%',
       },
       zIndex: {
+        "-1": -1,
         100: 100
       },
       keyframes: {

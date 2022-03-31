@@ -118,7 +118,7 @@ const AboutPage = () => {
       <Text type="subtitle" className="mb-12 md:mb-16">
         Services.
       </Text>
-      <div className="flex gap-8 px-4 mb-12 -mx-4 overflow-x-auto md:px-0 scroll-pr-6 scroll-mr-8 md:mr-0 md:gap-10">
+      <div className="flex gap-8 px-4 mb-12 -mx-4 overflow-x-auto md:px-8 md:-mx-8 lg:px-0 scroll-pr-6 scroll-mr-8 lg:mr-0 lg:gap-10">
         <CardsService />
       </div>
       <Separator />
