@@ -13,10 +13,10 @@ export type MenuItemType = {
 };
 
 const menuItems: MenuItemType[] = [
-  {
-    label: "Projects",
-    path: "/projects",
-  },
+  // {
+  //   label: "Projects",
+  //   path: "/projects",
+  // },
   {
     label: "Projects",
     path: "/my-projects",

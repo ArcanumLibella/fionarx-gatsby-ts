@@ -69,7 +69,7 @@ export const ProjectCard = (/* { height }: ProjectCardProps */) => {
         // animate="end"
         // exit={{ scale: 1, transition: { delay: 0.7, duration: 0.3 } }}
         // variants={cardVariants}
-        whileHover={{ scale: 1.05, transition: { when: "afterChildren" } }}
+        whileHover={{ scale: 1.1, transition: { when: "afterChildren" } }}
         className="h-full cursor-pointer max-h-[70vh]"
       >
         <Link
@@ -87,6 +87,7 @@ export const ProjectCard = (/* { height }: ProjectCardProps */) => {
               className="h-full"
             />
           </div>
+
           {/* TITLE */}
           <motion.h2
             variants={titleVariants}
@@ -95,6 +96,7 @@ export const ProjectCard = (/* { height }: ProjectCardProps */) => {
           >
             OLYMPICS OPTIMIZED
           </motion.h2>
+
           {/* DESCRIPTION */}
           <motion.div
             variants={descriptionVariants}
@@ -107,6 +109,8 @@ export const ProjectCard = (/* { height }: ProjectCardProps */) => {
               accusantium provident.
             </Text>
           </motion.div>
+
+          {/* TAGS */}
           <div className="absolute flex flex-wrap items-start w-full gap-2 md:gap-4 top-[72vh]">
             <Tag label="Web app" />
             <Tag label="React" />
