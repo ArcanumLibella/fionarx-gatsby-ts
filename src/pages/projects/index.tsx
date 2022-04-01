@@ -17,14 +17,10 @@ const ProjectsPage = ({ data }) => {
             description={node.frontmatter.description}
             // imageSrc="OlympicsOptimized_preview.png"
             tags={node.frontmatter.tags}
+            slug={node.slug}
+            imageData={node.frontmatter.preview_image}
           />
         ))}
-        {/* <ProjectCard
-          name="Olympics Optimized"
-          description="Pouet"
-          imageSrc="OlympicsOptimized_preview.png"
-          tags={["WebApp", "React"]}
-        /> */}
       </div>
     </div>
   );
@@ -39,10 +35,14 @@ export const query = graphql`
           date
           description
           tags
+          preview_image {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, sizes: "400", width: 400)
+            }
+          }
         }
         slug
         id
-        body
       }
     }
   }

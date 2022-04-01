@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "gatsby";
 
 import { COLORS } from "@/constants/Colors";
-// import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
 import { Text } from "@/components/atoms/Text";
 import { Tag } from "@/components/atoms/Tag";
 
@@ -10,39 +10,34 @@ type ProjectCardProps = {
   name: string;
   description?: string;
   tags?: string;
-  // imageSrc?: string;
+  slug: string;
+  imageData: ImageDataLike;
 };
 
-// type ProjectType = {
-//   name: string;
-//   tags: string[];
-//   imageSrc: string;
-// };
-
-// const cardVariants = {
-//   initial: {
-//     opacity: 0,
-//     translateY: '0%',
-//     transition: {
-//       // staggerChildren: 0.2,
-//       // staggerDirection: -1,
-//     },
-//   },
-//   end: {
-//     opacity: 1,
-//     translateY: '10%',
-//     transition: {
-//       delay: 0.7,
-//       duration: 0.3,
-//       // staggerChildren: 0.2,
-//       // staggerDirection: 1,
-//     },
-//   },
-// };
+const cardVariants = {
+  initial: {
+    opacity: 0,
+    translateY: "20%",
+    transition: {
+      staggerChildren: 0.2,
+      staggerDirection: 1,
+    },
+  },
+  end: {
+    opacity: 1,
+    translateY: "0%",
+    transition: {
+      delay: 0.3,
+      duration: 0.3,
+      staggerChildren: 0.2,
+      staggerDirection: -1,
+    },
+  },
+};
 
 const titleVariants = {
   hover: {
-    scale: 1.4,
+    scale: 1.1,
     color: COLORS.tomato.DEFAULT,
   },
 };
@@ -58,56 +53,46 @@ const descriptionVariants = {
   },
 };
 
-// const tagsVariants = {
-//   hover: {
-//     opacity: 1,
-//     bottom: 0,
-//     transition: {
-//       type: "spring",
-//       duration: 0.3,
-//     },
-//   },
-// };
-
 export const ProjectCard = ({
   name,
   description,
   tags,
-}: // imageSrc,
-ProjectCardProps) => {
+  slug,
+  imageData,
+}: ProjectCardProps) => {
+  const image = getImage(imageData);
+
   return (
     <AnimatePresence>
       {/* TODO: Add animation on page loading */}
       <motion.div
-        // initial="initial"
-        // animate="end"
-        // exit={{ scale: 1, transition: { delay: 0.7, duration: 0.3 } }}
-        // variants={cardVariants}
+        initial="initial"
+        animate="end"
+        exit={{ scale: 1, transition: { delay: 0.7, duration: 0.3 } }}
+        variants={cardVariants}
         whileHover={{ scale: 1.1, transition: { when: "afterChildren" } }}
         className="h-full cursor-pointer max-h-[70vh]"
       >
         <Link
-          to={`/projects/${name}`}
+          to={`/projects/${slug}`}
           className="relative inline-block w-[70vw] md:w-[32vw] xl:w-[20vw] max-w-[480px] bg-purple
             h-full"
         >
           {/* IMAGE */}
           <div className="absolute w-full h-full">
-            {/* <StaticImage
-              src={`../../../../static/images/${imageSrc}`}
-              // src="../../../../static/images/OlympicsOptimized_preview.png"
-              alt="Preview"
-              placeholder="blurred"
+            <GatsbyImage
+              image={image}
+              alt="Project's preview"
               objectFit="cover"
               className="h-full"
-            /> */}
+            />
           </div>
 
           {/* TITLE */}
           <motion.h2
             variants={titleVariants}
             whileHover="hover"
-            className="absolute flex justify-center items-center h-full w-[70vw] md:w-[32vw] xl:w-[20vw] max-w-[480px] text-[5vh] md:text-[3vh] xl:text-[3vw] font-black text-center uppercase font-brother"
+            className="drop-shadow-lg absolute flex justify-center items-center h-full w-[70vw] md:w-[32vw] xl:w-[20vw] max-w-[480px] text-[5vh] md:text-[3vh] xl:text-[3vw] font-black text-center uppercase font-brother"
           >
             {name}
           </motion.h2>
