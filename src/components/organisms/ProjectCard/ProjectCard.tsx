@@ -2,12 +2,21 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "gatsby";
 
 import { COLORS } from "@/constants/Colors";
-import { StaticImage } from "gatsby-plugin-image";
+// import { StaticImage } from "gatsby-plugin-image";
 import { Text } from "@/components/atoms/Text";
 import { Tag } from "@/components/atoms/Tag";
 
-// type ProjectCardProps = {
-//   height: string;
+type ProjectCardProps = {
+  name: string;
+  description?: string;
+  tags?: string;
+  // imageSrc?: string;
+};
+
+// type ProjectType = {
+//   name: string;
+//   tags: string[];
+//   imageSrc: string;
 // };
 
 // const cardVariants = {
@@ -60,7 +69,12 @@ const descriptionVariants = {
 //   },
 // };
 
-export const ProjectCard = (/* { height }: ProjectCardProps */) => {
+export const ProjectCard = ({
+  name,
+  description,
+  tags,
+}: // imageSrc,
+ProjectCardProps) => {
   return (
     <AnimatePresence>
       {/* TODO: Add animation on page loading */}
@@ -73,19 +87,20 @@ export const ProjectCard = (/* { height }: ProjectCardProps */) => {
         className="h-full cursor-pointer max-h-[70vh]"
       >
         <Link
-          to="/projects/project-name"
+          to={`/projects/${name}`}
           className="relative inline-block w-[70vw] md:w-[32vw] xl:w-[20vw] max-w-[480px] bg-purple
             h-full"
         >
           {/* IMAGE */}
           <div className="absolute w-full h-full">
-            <StaticImage
-              src="../../../../static/images/OlympicsOptimized_preview.png"
+            {/* <StaticImage
+              src={`../../../../static/images/${imageSrc}`}
+              // src="../../../../static/images/OlympicsOptimized_preview.png"
               alt="Preview"
               placeholder="blurred"
               objectFit="cover"
               className="h-full"
-            />
+            /> */}
           </div>
 
           {/* TITLE */}
@@ -94,7 +109,7 @@ export const ProjectCard = (/* { height }: ProjectCardProps */) => {
             whileHover="hover"
             className="absolute flex justify-center items-center h-full w-[70vw] md:w-[32vw] xl:w-[20vw] max-w-[480px] text-[5vh] md:text-[3vh] xl:text-[3vw] font-black text-center uppercase font-brother"
           >
-            OLYMPICS OPTIMIZED
+            {name}
           </motion.h2>
 
           {/* DESCRIPTION */}
@@ -104,17 +119,19 @@ export const ProjectCard = (/* { height }: ProjectCardProps */) => {
             className="absolute -bottom-10 w-[70vw] md:w-[32vw] xl:w-[20vw] max-w-[480px] px-4 py-8 bg-purple-light opacity-0"
           >
             <Text type="custom" className="text-sm 2xl:text-xsm font-body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-              ex rerum autem. Excepturi natus suscipit eos blanditiis
-              accusantium provident.
+              {description}
             </Text>
           </motion.div>
 
           {/* TAGS */}
           <div className="absolute flex flex-wrap items-start w-full gap-2 md:gap-4 top-[72vh]">
-            <Tag label="Web app" />
-            <Tag label="React" />
-            <Tag label="E-commerce" />
+            {tags
+              .split(",")
+              .map((tag) => tag.trim())
+              .filter((tag) => tag.length > 0)
+              .map((tag) => (
+                <Tag key={tag} label={tag} />
+              ))}
           </div>
         </Link>
       </motion.div>
