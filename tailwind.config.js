@@ -38,8 +38,8 @@ module.exports = {
         tiny: '.75rem', // 12px
         sm: '.875rem', // 14px
         "xsm": '1.25rem', // 20px
-        normal: '1rem', // 16rem
-        "mbase": '.875rem', // 14px
+        normal: '1rem', // 16px
+        "mbase": '1rem', // 16px
         base: '1.25rem', // 20px
         "xbase": '1.5rem', // 24px
         "mmd": '1.5rem', // 24px

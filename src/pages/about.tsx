@@ -1,95 +1,8 @@
 import { Separator } from "@/components/atoms/Separator";
 import { Text } from "@/components/atoms/Text";
+import { StackItems } from "@/components/molecules/StackItems";
 import { CardsService } from "@/components/organisms/CardsService";
 import SecondaryLayout from "@/layouts/SecondaryLayout";
-
-export type TechItemType = {
-  id: number;
-  name: string;
-};
-
-const techItems: TechItemType[] = [
-  {
-    id: 1,
-    name: "React.js",
-  },
-  {
-    id: 2,
-    name: "Gastby.js",
-  },
-  {
-    id: 3,
-    name: "Javascript ES6",
-  },
-  {
-    id: 4,
-    name: "TypeScript",
-  },
-  {
-    id: 5,
-    name: "Storybook",
-  },
-  {
-    id: 6,
-    name: "GraphQL & Apollo",
-  },
-  {
-    id: 7,
-    name: "HTML",
-  },
-  {
-    id: 8,
-    name: "Sass",
-  },
-  {
-    id: 9,
-    name: "TailWindCSS",
-  },
-  {
-    id: 10,
-    name: "Styled-component",
-  },
-  {
-    id: 11,
-    name: "Responsive & Mobile First",
-  },
-  {
-    id: 12,
-    name: "WordPress",
-  },
-  {
-    id: 13,
-    name: "Bootstrap",
-  },
-  {
-    id: 14,
-    name: "ACF",
-  },
-  {
-    id: 15,
-    name: "GravityForm",
-  },
-  {
-    id: 16,
-    name: "Timber & TWIG",
-  },
-  {
-    id: 17,
-    name: "Github",
-  },
-  {
-    id: 18,
-    name: "Figma",
-  },
-  {
-    id: 19,
-    name: "Asana",
-  },
-  {
-    id: 20,
-    name: "JIRA",
-  },
-];
 
 const AboutPage = () => {
   return (
@@ -118,30 +31,28 @@ const AboutPage = () => {
       <Text type="subtitle" className="mb-12 md:mb-16">
         Services.
       </Text>
-      <div className="flex gap-8 px-4 mb-12 -mx-4 overflow-x-auto md:px-8 md:-mx-8 lg:px-0 scroll-pr-6 scroll-mr-8 lg:mr-0 lg:gap-10">
+      <div className="flex gap-8 px-4 mb-12 -mx-4 overflow-x-auto lg:overflow-hidden md:px-8 md:-mx-8 xl:px-0 xl:mx-0 xl:gap-10">
         <CardsService />
       </div>
       <Separator />
       <Text type="subtitle" className="mb-12 md:mb-16">
         Technical stack.
       </Text>
-      <Text type="paragraph" className="mb-8">
+      <Text type="paragraph" className="mb-8 lg:mb-12">
         For the majority of my creations, I work with the <strong>React</strong>{" "}
         framework coupled with <strong>Gastby.js</strong>, a powerful duo
         renowned for its performance and the large community that supports it.
         For the back office I use <strong>Strapi</strong>, an open-source
         headless CMS known for its flexibility and ease of use.
       </Text>
-      <div className="flex-col flex-wrap mb-12 md:mb-16 md:flex md:max-h-40">
-        {techItems.map((item) => {
-          return (
-            <Text key={item.id} type="paragraphLight">
-              {item.name}
-            </Text>
-          );
-        })}
+      <div className="flex flex-wrap gap-12 mb-12 md:mb-16">
+        <StackItems type="modernStack" />
+        <StackItems type="wordPressStack" />
+        <StackItems type="styleStack" />
+        <StackItems type="practicesStack" />
+        <StackItems type="toolsStack" />
       </div>
-      <Text type="paragraph" className="font-semibold">
+      <Text type="paragraph" className="text-base font-semibold">
         Agency? Recruiting firm ? Start-up? You can see my resume right{" "}
         <a
           href="https://www.figma.com/file/MMTQegNDNAyHUlx4dglEAE1U/CV?node-id=1422%3A4"
