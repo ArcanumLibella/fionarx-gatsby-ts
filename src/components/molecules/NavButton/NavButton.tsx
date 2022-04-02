@@ -27,11 +27,7 @@ export const NavButton = ({ toggleMenu }: NavButtonProps) => {
         aria-hidden="true"
         className="flex-col items-center justify-between md:py-4 md:w-20 md:h-screen md:flex md:bg-purple-ultraDark"
       >
-        <span
-          className={`flex items-center justify-center p-2 font-bold border-2 rounded-full lg:p-0 font-brother text-tiny md:justify-start md:items-start md:flex-1 border-purple-light md:border-none
-            ${isMobile && "w-14 h-14"}
-          `}
-        >
+        <span className="flex items-center justify-center w-full p-2 font-bold border-2 rounded-full lg:p-0 font-brother text-tiny md:items-start md:flex-1 border-purple-light md:border-none h-14">
           {isMobile ? "MENU" : <Hamburger toggled={isOpen} toggle={setOpen} />}
         </span>
         <SocialIcons className="flex-col justify-end flex-1 hidden gap-3 md:flex" />

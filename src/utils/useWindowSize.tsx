@@ -38,5 +38,5 @@ export const useWindowSize = () => {
 export const useIsMobile = () => {
   const { width } = useWindowSize();
 
-  return width <= BREAKPOINTS.tablet;
+  return width < BREAKPOINTS.tablet;
 };
