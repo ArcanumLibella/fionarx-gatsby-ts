@@ -2,15 +2,14 @@ import { useIsMobile } from "@/utils/useWindowSize";
 import { Link } from "gatsby";
 
 import { Squash as Hamburger } from "hamburger-react";
-import { useState } from "react";
 import { SocialIcons } from "../SocialIcons";
 
 type NavButtonProps = {
   toggleMenu: () => void;
+  open: boolean;
 };
 
-export const NavButton = ({ toggleMenu }: NavButtonProps) => {
-  const [isOpen, setOpen] = useState(false);
+export const NavButton = ({ toggleMenu, open }: NavButtonProps) => {
   const isMobile = useIsMobile();
 
   return (
@@ -27,8 +26,12 @@ export const NavButton = ({ toggleMenu }: NavButtonProps) => {
         aria-hidden="true"
         className="flex-col items-center justify-between md:py-4 md:w-20 md:h-screen md:flex md:bg-purple-ultraDark"
       >
-        <span className="flex items-center justify-center w-full p-2 font-bold border-2 rounded-full lg:p-0 font-brother text-tiny md:items-start md:flex-1 border-purple-light md:border-none h-14">
-          {isMobile ? "MENU" : <Hamburger toggled={isOpen} toggle={setOpen} />}
+        <span className="flex items-center justify-center w-full p-2 font-bold border-2 rounded-full lg:p-0 font-brother text-tiny md:items-start md:flex-1 border-purple-light md:border-none h-14 filter backdrop-blur-md">
+          {isMobile ? (
+            "MENU"
+          ) : (
+            <Hamburger toggled={open} toggle={() => toggleMenu()} />
+          )}
         </span>
         <SocialIcons className="flex-col justify-end flex-1 hidden gap-3 md:flex" />
       </div>

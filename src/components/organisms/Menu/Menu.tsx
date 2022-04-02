@@ -75,7 +75,7 @@ export const Menu = () => {
   return (
     // TODO: Style menu + add close menu if click outside (useRef ?)
     <>
-      <NavButton toggleMenu={cycleOpen} />
+      <NavButton toggleMenu={cycleOpen} open={open} />
       <AnimatePresence>
         {open && (
           <motion.nav

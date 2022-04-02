@@ -4,6 +4,7 @@ import InstagramIcon from "./instagram.svg";
 import LinkedinIcon from "./linkedin.svg";
 import MaltIcon from "./malt.svg";
 import AtIcon from "./at.svg";
+import CloseIcon from "./close.svg";
 
 export {
   GithubIcon,
@@ -12,4 +13,5 @@ export {
   MaltIcon,
   BurgerIcon,
   AtIcon,
+  CloseIcon,
 };
