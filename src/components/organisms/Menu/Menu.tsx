@@ -83,7 +83,7 @@ export const Menu = () => {
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
             exit={{ width: "0%", transition: { delay: 0.7, duration: 0.3 } }}
-            className="absolute z-40 overflow-hidden xl:max-w-8/12"
+            className="fixed z-40 overflow-hidden xl:max-w-8/12"
           >
             <motion.ul
               className="flex flex-col justify-center w-full h-screen bg-twilight md:ml-20"

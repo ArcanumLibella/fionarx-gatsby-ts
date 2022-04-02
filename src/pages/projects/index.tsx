@@ -15,7 +15,6 @@ const ProjectsPage = ({ data }) => {
             key={node.id}
             name={node.frontmatter.title}
             description={node.frontmatter.description}
-            // imageSrc="OlympicsOptimized_preview.png"
             tags={node.frontmatter.tags}
             slug={node.slug}
             imageData={node.frontmatter.preview_image}
