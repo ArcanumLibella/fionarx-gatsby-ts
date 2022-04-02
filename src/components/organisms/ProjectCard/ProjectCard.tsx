@@ -71,15 +71,15 @@ export const ProjectCard = ({
         exit={{ scale: 1, transition: { delay: 0.7, duration: 0.3 } }}
         variants={cardVariants}
         whileHover={{ scale: 1.1, transition: { when: "afterChildren" } }}
-        className="h-full cursor-pointer max-h-[70vh]"
+        className="h-[70vh] cursor-pointer max-h-[70vh]"
       >
         <Link
           to={`/projects/${slug}`}
           className="relative inline-block w-[70vw] md:w-[32vw] xl:w-[20vw] max-w-[480px] bg-purple
-            h-full"
+            h-[70vh]"
         >
           {/* IMAGE */}
-          <div className="absolute w-full h-full">
+          <div className="absolute w-full h-[70vh]">
             <GatsbyImage
               image={image}
               alt="Project's preview"
