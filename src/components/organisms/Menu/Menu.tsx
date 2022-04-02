@@ -93,6 +93,14 @@ export const Menu = () => {
               exit="closed"
               variants={menuItemsVariants}
             >
+              {isMobile && (
+                <motion.li
+                  variants={menuItemVariants}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <MenuItem toggleMenu={cycleOpen} label="Home" path="/" />
+                </motion.li>
+              )}
               {menuItems.map((item) => {
                 return (
                   <motion.li
