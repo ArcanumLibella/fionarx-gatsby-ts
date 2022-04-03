@@ -19,7 +19,7 @@ const ProjectPage = ({ data }) => {
         imgClassName="h-full"
       />
       {/* </div> */}
-      <div className="relative flex flex-col-reverse w-full xl:h-screen p-5 md:p-10 xl:min-w-[520px] xl:max-w-[35%]">
+      <div className="relative flex flex-col-reverse w-full xl:h-screen p-5 pb-10 md:p-10 xl:min-w-[520px] xl:max-w-[35%]">
         <Blobs className="hidden fixed xl:flex justify-center items-center xl:-right-1/10 xl:-top-1/5 w-[56vw] h-[40vh] xl:w-[40vw] xl:h-[48vh] 2xl:w-[35vw] 2xl:h-[44vh]" />
         <div>
           {/* TITLE */}
@@ -51,7 +51,7 @@ const ProjectPage = ({ data }) => {
               >
                 ROLE
               </Text>
-              <div className="mt-1.5 2xl:mt-0.5">
+              <div /* className="mt-0.5 md:mt-1.5 2xl:mt-0.5" */>
                 <Text type="paragraphLight">Designer</Text>
                 <Text type="paragraphLight">Front-end developer</Text>
               </div>
@@ -63,7 +63,7 @@ const ProjectPage = ({ data }) => {
               >
                 YEAR
               </Text>
-              <div className="mt-1.5 2xl:mt-0.5">
+              <div /* className="mt-0.5 md:mt-1.5 2xl:mt-0.5" */>
                 <Text type="paragraphLight">2020</Text>
               </div>
             </div>
