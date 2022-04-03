@@ -8,7 +8,7 @@ import { Tag } from "@/components/atoms/Tag";
 
 type ProjectCardProps = {
   name: string;
-  description?: string;
+  excerpt?: string;
   tags?: string;
   slug: string;
   imageData: ImageDataLike;
@@ -55,7 +55,7 @@ const descriptionVariants = {
 
 export const ProjectCard = ({
   name,
-  description,
+  excerpt,
   tags,
   slug,
   imageData,
@@ -104,7 +104,7 @@ export const ProjectCard = ({
             className="absolute -bottom-10 w-[70vw] md:w-[32vw] xl:w-[20vw] max-w-[480px] px-4 py-8 bg-purple-light opacity-0"
           >
             <Text type="custom" className="text-sm 2xl:text-xsm font-body">
-              {description}
+              {excerpt}
             </Text>
           </motion.div>
 

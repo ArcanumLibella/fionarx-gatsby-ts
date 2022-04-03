@@ -4,9 +4,11 @@ type TextPossibleTypes =
   | "custom" // Should be used in very rare cases
   | "heroTitle"
   | "mainTitle"
+  | "secondTitle"
   | "title"
   | "subtitle"
   | "paragraph"
+  | "paragraphSmall"
   | "paragraphLight";
 
 export type TextProps = {
@@ -37,21 +39,29 @@ export const Text = ({
           {children}
         </h2>
       );
-    case "title":
+    case "secondTitle":
       return (
         <h3
-          className={`font-brother font-medium text-mlg md:text-lg 2xl:text-xlg md:tracking-tight selection:bg-purple ${additionalStyle}`}
+          className={`font-brother font-extrabold text-lg md:text-xlg 2xl:text-xxlg leading-none selection:bg-purple text-tomato ${additionalStyle}`}
         >
           {children}
         </h3>
       );
-    case "subtitle":
+    case "title":
       return (
         <h4
-          className={`font-brother font-extrabold text-mmd md:text-md 2xl:text-xmd selection:bg-purple uppercase ${additionalStyle}`}
+          className={`font-brother font-medium text-mlg md:text-lg 2xl:text-xlg md:tracking-tight selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h4>
+      );
+    case "subtitle":
+      return (
+        <h5
+          className={`font-brother font-extrabold text-mmd md:text-md 2xl:text-xmd selection:bg-purple uppercase ${additionalStyle}`}
+        >
+          {children}
+        </h5>
       );
     case "paragraph":
       return (
@@ -61,10 +71,18 @@ export const Text = ({
           {children}
         </p>
       );
+    case "paragraphSmall":
+      return (
+        <p
+          className={`font-body text-normal 2xl:text-base font-light selection:bg-purple ${additionalStyle}`}
+        >
+          {children}
+        </p>
+      );
     case "paragraphLight":
       return (
         <p
-          className={`font-body font-extralight text-normal tracking-wider leading-relaxed selection:bg-purple ${additionalStyle}`}
+          className={`font-body font-extralight text-normal 2xl:text-base tracking-wider leading-relaxed selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </p>
