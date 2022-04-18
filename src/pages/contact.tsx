@@ -10,13 +10,13 @@ const ContactPage = () => {
         I’m always <strong>available</strong> for new freelance opportunities.
       </Text>
       <Separator />
-      <a href="mailto:hello@fionarx.io" className="flex items-center">
+      <a href="mailto:fionarx.dev@gmail.com" className="flex items-center">
         <AtIcon width={36} />
         <Text
           type="custom"
           className="ml-4 font-black tracking-wide font-brother text-mlg md:text-lg 2xl:text-xlg text-tomato"
         >
-          hello@fionarx.io
+          fionarx.dev@gmail.com
         </Text>
       </a>
     </SecondaryLayout>
