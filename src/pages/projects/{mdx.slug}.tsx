@@ -79,7 +79,6 @@ export const GetPostData = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
-        excerpt
         tags
         date
         preview_image {

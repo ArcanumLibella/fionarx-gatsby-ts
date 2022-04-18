@@ -14,7 +14,6 @@ const ProjectsPage = ({ data }) => {
           <ProjectCard
             key={node.id}
             name={node.frontmatter.title}
-            excerpt={node.frontmatter.excerpt}
             tags={node.frontmatter.tags}
             slug={node.slug}
             imageData={node.frontmatter.preview_image}
@@ -32,7 +31,6 @@ export const query = graphql`
         frontmatter {
           title
           date
-          excerpt
           tags
           preview_image {
             childImageSharp {
