@@ -21,7 +21,7 @@ export const NavButton = ({ toggleMenu, open }: NavButtonProps) => {
         HOME
       </Link>
       <div
-        onClick={toggleMenu}
+        onClick={() => toggleMenu()}
         role="button"
         aria-hidden="true"
         className="flex-col items-center justify-between md:py-4 md:w-20 md:h-screen md:flex md:bg-purple-ultraDark"
@@ -30,7 +30,11 @@ export const NavButton = ({ toggleMenu, open }: NavButtonProps) => {
           {isMobile ? (
             "MENU"
           ) : (
-            <Hamburger toggled={open} toggle={() => toggleMenu()} />
+            <Hamburger
+              toggled={open}
+              toggle={toggleMenu}
+              onToggle={toggleMenu}
+            />
           )}
         </span>
         <SocialIcons className="flex-col justify-end flex-1 hidden gap-3 md:flex" />
