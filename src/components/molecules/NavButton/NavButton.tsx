@@ -5,11 +5,11 @@ import { Squash as Hamburger } from "hamburger-react";
 import { SocialIcons } from "../SocialIcons";
 
 type NavButtonProps = {
-  toggleMenu: () => void;
-  open: boolean;
+  openMenuHandler: (e) => void;
+  isMenuOpen: boolean;
 };
 
-export const NavButton = ({ toggleMenu, open }: NavButtonProps) => {
+export const NavButton = ({ openMenuHandler, isMenuOpen }: NavButtonProps) => {
   const isMobile = useIsMobile();
 
   return (
@@ -21,7 +21,7 @@ export const NavButton = ({ toggleMenu, open }: NavButtonProps) => {
         HOME
       </Link>
       <div
-        onClick={() => toggleMenu()}
+        onClick={(e) => openMenuHandler(e)}
         role="button"
         aria-hidden="true"
         className="flex-col items-center justify-between md:py-4 md:w-20 md:h-screen md:flex md:bg-purple-ultraDark"
@@ -31,9 +31,9 @@ export const NavButton = ({ toggleMenu, open }: NavButtonProps) => {
             "MENU"
           ) : (
             <Hamburger
-              toggled={open}
-              toggle={toggleMenu}
-              onToggle={toggleMenu}
+              toggled={isMenuOpen}
+              toggle={() => openMenuHandler}
+              onToggle={() => openMenuHandler}
             />
           )}
         </span>

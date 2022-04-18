@@ -1,10 +1,12 @@
-import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import { GithubIcon, LinkedinIcon, MaltIcon } from "@/assets/icons";
 import { NavButton } from "@/components/molecules/NavButton";
 import { COLORS } from "@/constants/Colors";
 import { useIsMobile } from "@/utils/useWindowSize";
 
+import { MouseEvent, useState } from "react";
+import { useOuterClick } from "@/hooks/useOutsideClick";
 import { MenuItem } from "../../atoms/MenuItem";
 
 export type MenuItemType = {
@@ -70,15 +72,28 @@ const menuItemVariants = {
 
 export const Menu = () => {
   const isMobile = useIsMobile();
-  const [open, cycleOpen] = useCycle(false, true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const innerRef = useOuterClick(() => {
+    setIsMenuOpen(false);
+  }, "click");
+
+  const openMenuHandler = (e: MouseEvent<HTMLElement>) => {
+    e.stopPropagation();
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleMenuItem = (e: MouseEvent<HTMLElement>) => {
+    e.stopPropagation();
+    setIsMenuOpen(false);
+  };
 
   return (
-    // TODO: Style menu + add close menu if click outside (useRef ?)
     <>
-      <NavButton toggleMenu={cycleOpen} open={open} />
+      <NavButton openMenuHandler={openMenuHandler} isMenuOpen={isMenuOpen} />
       <AnimatePresence>
-        {open && (
+        {isMenuOpen && (
           <motion.nav
+            ref={innerRef}
             key="menuAside"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
@@ -98,7 +113,11 @@ export const Menu = () => {
                   variants={menuItemVariants}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <MenuItem toggleMenu={cycleOpen} label="Home" path="/" />
+                  <MenuItem
+                    toggleMenuItem={toggleMenuItem}
+                    label="Home"
+                    path="/"
+                  />
                 </motion.li>
               )}
               {menuItems.map((item) => {
@@ -108,7 +127,7 @@ export const Menu = () => {
                     variants={menuItemVariants}
                     whileHover={{ scale: 1.05 }}
                   >
-                    <MenuItem toggleMenu={cycleOpen} {...item} />
+                    <MenuItem toggleMenuItem={toggleMenuItem} {...item} />
                   </motion.li>
                 );
               })}
