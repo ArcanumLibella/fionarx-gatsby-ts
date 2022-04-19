@@ -22,6 +22,7 @@ const ProjectPage = ({ data }) => {
       />
       {/* </div> */}
       <div className="relative flex flex-col-reverse w-full xl:h-screen p-5 pb-10 md:p-10 xl:min-w-[520px] xl:max-w-[35%]">
+        {/* TODO: Add back button */}
         <Blobs className="hidden fixed xl:flex justify-center items-center xl:-right-1/10 xl:-top-1/5 w-[56vw] h-[40vh] xl:w-[40vw] xl:h-[48vh] 2xl:w-[35vw] 2xl:h-[44vh]" />
         <div>
           {/* TITLE */}
@@ -39,6 +40,8 @@ const ProjectPage = ({ data }) => {
                 <Tag key={tag} label={tag} />
               ))}
           </div>
+
+          {/* TODO: Add Discover link */}
 
           {/* DESCRIPTION */}
           <Text type="paragraphSmall" className="mb-10">
