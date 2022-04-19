@@ -26,12 +26,13 @@ const ProjectsPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    allMdx(sort: { fields: frontmatter___date, order: ASC }) {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
         frontmatter {
           title
           date
           tags
+          roles
           preview_image {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED, sizes: "400", width: 400)
