@@ -5,6 +5,8 @@ import LinkedinIcon from "./linkedin.svg";
 import MaltIcon from "./malt.svg";
 import AtIcon from "./at.svg";
 import CloseIcon from "./close.svg";
+import ArrowLeftIcon from "./arrow-left.svg";
+import ArrowRightIcon from "./arrow-right.svg";
 
 export {
   GithubIcon,
@@ -14,4 +16,6 @@ export {
   BurgerIcon,
   AtIcon,
   CloseIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
 };

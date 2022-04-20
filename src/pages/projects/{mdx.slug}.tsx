@@ -1,9 +1,11 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Text } from "@/components/atoms/Text";
 import { Tag } from "@/components/atoms/Tag";
 import { Blobs } from "@/components/organisms/Blobs";
+import { ArrowLeftIcon } from "@/assets/icons";
+import { COLORS } from "@/constants/Colors";
 
 const ProjectPage = ({ data }) => {
   const image1 = getImage(data.mdx.frontmatter.image1);
@@ -22,8 +24,16 @@ const ProjectPage = ({ data }) => {
       />
       {/* </div> */}
       <div className="relative flex flex-col-reverse w-full xl:h-screen p-5 pb-10 md:p-10 xl:min-w-[520px] xl:max-w-[35%]">
-        {/* TODO: Add back button */}
-        <Blobs className="hidden fixed xl:flex justify-center items-center xl:-right-1/10 xl:-top-1/5 w-[56vw] h-[40vh] xl:w-[40vw] xl:h-[48vh] 2xl:w-[35vw] 2xl:h-[44vh]" />
+        <Link to="/projects" className="absolute top-10 flex z-100 group">
+          <ArrowLeftIcon
+            fill={COLORS.white.DEFAULT}
+            className="transition-all group-hover:-translate-x-1"
+          />
+          <Text type="custom" className="font-bold uppercase ml-4">
+            Back
+          </Text>
+        </Link>
+        <Blobs className="hidden fixed xl:flex justify-center items-center xl:-right-1/10 xl:-top-1/5 w-[56vw] h-[40vh] xl:w-[40vw] xl:h-[48vh] 2xl:w-[35vw] 2xl:h-[44vh] z-0" />
         <div>
           {/* TITLE */}
           <Text type="secondTitle" className="mb-4">
