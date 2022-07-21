@@ -49,7 +49,7 @@ const ProjectPage = ({ data }) => {
           </Text>
 
           <div className="flex justify-between">
-            <div className="flex">
+            <div className="flex flex-col">
               <Text
                 type="custom"
                 className="mr-6 text-base font-bold uppercase font-body text-purple-light lg:text-xbase"
@@ -72,7 +72,7 @@ const ProjectPage = ({ data }) => {
                   ))}
               </div>
             </div>
-            <div className="flex">
+            <div className="flex flex-col">
               <Text
                 type="custom"
                 className="mr-6 font-bold uppercase mr-6text-base font-body text-purple-light lg:text-xbase"
@@ -97,6 +97,7 @@ export const GetPostData = graphql`
         title
         tags
         roles
+        # linkSite
         date
         image1 {
           childImageSharp {

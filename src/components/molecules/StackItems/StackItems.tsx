@@ -143,7 +143,7 @@ export const StackItems = ({ type }: StackItemsProps) => {
       case "styleStack":
         return "Style";
       case "practicesStack":
-        return "Goods Practices";
+        return "Good Practices";
       case "toolsStack":
         return "Tools";
       default:
