@@ -5,8 +5,7 @@ import { Text } from "@/components/atoms/Text";
 import { Tag } from "@/components/atoms/Tag";
 import { Blobs } from "@/components/organisms/Blobs";
 import { LinkButton } from "@/components/molecules/LinkButton";
-import { COLORS } from "@/constants/Colors";
-import { ArrowRightIcon } from "@/assets/icons";
+import { ExternalLinkButton } from "@/components/molecules/ExternalLinkButton";
 
 const ProjectPage = ({ data }) => {
   const image1 = getImage(data.mdx.frontmatter.image1);
@@ -29,7 +28,7 @@ const ProjectPage = ({ data }) => {
           label="Back"
           side="left"
           path="/projects"
-          className="absolute top-10 "
+          className="absolute top-10"
         />
         <Blobs className="hidden fixed xl:flex justify-center items-center xl:-right-1/10 xl:-top-1/5 w-[56vw] h-[40vh] xl:w-[40vw] xl:h-[48vh] 2xl:w-[35vw] 2xl:h-[44vh] z-0" />
         <div className="pt-16 md:pt-12 xl:pt-0">
@@ -38,9 +37,9 @@ const ProjectPage = ({ data }) => {
             {data.mdx.frontmatter.title}
           </Text>
 
-          <div className="flex justify-between mb-10">
+          <div className="justify-between mb-10 md:flex">
             {/* TAGS */}
-            <div className="flex flex-wrap items-start w-full gap-2 md:gap-4">
+            <div className="flex flex-wrap items-start w-full gap-2 mb-8 md:mb-0 md:gap-4">
               {data.mdx.frontmatter.tags
                 .split(",")
                 .map((tag) => tag.trim())
@@ -49,21 +48,25 @@ const ProjectPage = ({ data }) => {
                   <Tag key={tag} label={tag} />
                 ))}
             </div>
-
-            <a
-              href={data.mdx.frontmatter.link}
-              target="_blank"
-              className="flex items-center group text-tomato"
-              rel="noreferrer"
-            >
-              <Text type="custom" className="font-bold uppercase text-tomato">
-                Discover
-              </Text>
-              <ArrowRightIcon
-                fill={COLORS.tomato.DEFAULT}
-                className="ml-4 transition-all group-hover:translate-x-1"
-              />
-            </a>
+            {/* EXTERNAL LINKS */}
+            <div className="flex gap-6">
+              {data.mdx.frontmatter.linkFigma && (
+                <ExternalLinkButton
+                  label="Design"
+                  side="right"
+                  path={data.mdx.frontmatter.linkFigma}
+                  className="text-white"
+                />
+              )}
+              {data.mdx.frontmatter.linkSite && (
+                <ExternalLinkButton
+                  label="Site"
+                  side="right"
+                  path={data.mdx.frontmatter.linkSite}
+                  className="text-white"
+                />
+              )}
+            </div>
           </div>
 
           {/* DESCRIPTION */}
@@ -120,9 +123,9 @@ export const GetPostData = graphql`
         title
         tags
         roles
-        # linkSite
+        linkSite
+        linkFigma
         date
-        link
         image1 {
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED)

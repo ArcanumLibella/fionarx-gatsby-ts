@@ -1,52 +1,46 @@
 import { ArrowLeftIcon, ArrowRightIcon } from "@/assets/icons";
 import { Text } from "@/components/atoms/Text";
-import { COLORS } from "@/constants/Colors";
-import { Link } from "gatsby";
 import { HTMLAttributes } from "react";
 
-export type LinkButtonProps = {
+export type ExternalLinkButtonProps = {
   side?: "left" | "right";
   label: string;
   path: string;
   className?: HTMLAttributes<HTMLImageElement>["className"];
 };
 
-export const LinkButton = ({
+export const ExternalLinkButton = ({
   side = "right",
   label,
   path,
   className: additionalStyle,
-}: LinkButtonProps) => {
+}: ExternalLinkButtonProps) => {
   const handleSideArrow = () => {
     if (side === "left") {
       return (
-        <ArrowLeftIcon
-          fill={COLORS.white.DEFAULT}
-          className="mr-2 transition-all group-hover:-translate-x-1"
-        />
+        <ArrowLeftIcon className="mr-1 transition-all group-hover:-translate-x-1" />
       );
     }
     return (
-      <ArrowRightIcon
-        fill={COLORS.white.DEFAULT}
-        className="ml-2 transition-all group-hover:translate-x-1"
-      />
+      <ArrowRightIcon className="ml-1 transition-all group-hover:translate-x-1" />
     );
   };
 
   return (
-    <Link
-      to={path}
+    <a
+      href={path}
+      target="_blank"
       className={`
         flex items-center z-100 group 
         ${side === "left" && "flex-row-reverse"}
         ${additionalStyle}
       `}
+      rel="noreferrer"
     >
-      <Text type="custom" className="font-bold uppercase">
+      <Text type="custom" className="font-bold uppercase text-tiny">
         {label}
       </Text>
       {handleSideArrow()}
-    </Link>
+    </a>
   );
 };
