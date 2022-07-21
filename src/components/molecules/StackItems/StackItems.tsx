@@ -26,7 +26,7 @@ export const StackItems = ({ type }: StackItemsProps) => {
     },
     {
       id: 3,
-      name: "Next.js",
+      name: "Next.js (soon)",
     },
     {
       id: 4,
