@@ -61,7 +61,7 @@ const ProjectPage = ({ data }) => {
               </Text>
               <ArrowRightIcon
                 fill={COLORS.tomato.DEFAULT}
-                className="transition-all group-hover:translate-x-1 ml-4"
+                className="ml-4 transition-all group-hover:translate-x-1"
               />
             </a>
           </div>
