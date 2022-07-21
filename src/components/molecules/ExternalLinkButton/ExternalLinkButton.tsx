@@ -31,7 +31,7 @@ export const ExternalLinkButton = ({
       href={path}
       target="_blank"
       className={`
-        flex items-center z-100 group 
+        flex items-center z-30 group 
         ${side === "left" && "flex-row-reverse"}
         ${additionalStyle}
       `}
