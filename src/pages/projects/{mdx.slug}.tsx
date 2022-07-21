@@ -4,6 +4,9 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Text } from "@/components/atoms/Text";
 import { Tag } from "@/components/atoms/Tag";
 import { Blobs } from "@/components/organisms/Blobs";
+import { LinkButton } from "@/components/molecules/LinkButton";
+import { COLORS } from "@/constants/Colors";
+import { ArrowRightIcon } from "@/assets/icons";
 
 const ProjectPage = ({ data }) => {
   const image1 = getImage(data.mdx.frontmatter.image1);
@@ -22,26 +25,46 @@ const ProjectPage = ({ data }) => {
       />
       {/* </div> */}
       <div className="relative flex flex-col-reverse w-full xl:h-screen p-5 pb-10 md:p-10 xl:min-w-[520px] xl:max-w-[35%]">
-        {/* TODO: Add back button */}
-        <Blobs className="hidden fixed xl:flex justify-center items-center xl:-right-1/10 xl:-top-1/5 w-[56vw] h-[40vh] xl:w-[40vw] xl:h-[48vh] 2xl:w-[35vw] 2xl:h-[44vh]" />
-        <div>
+        <LinkButton
+          label="Back"
+          side="left"
+          path="/projects"
+          className="absolute top-10 "
+        />
+        <Blobs className="hidden fixed xl:flex justify-center items-center xl:-right-1/10 xl:-top-1/5 w-[56vw] h-[40vh] xl:w-[40vw] xl:h-[48vh] 2xl:w-[35vw] 2xl:h-[44vh] z-0" />
+        <div className="pt-16 md:pt-12 xl:pt-0">
           {/* TITLE */}
           <Text type="secondTitle" className="mb-4">
             {data.mdx.frontmatter.title}
           </Text>
 
-          {/* TAGS */}
-          <div className="flex flex-wrap items-start w-full gap-2 mb-10 md:gap-4">
-            {data.mdx.frontmatter.tags
-              .split(",")
-              .map((tag) => tag.trim())
-              .filter((tag) => tag.length > 0)
-              .map((tag) => (
-                <Tag key={tag} label={tag} />
-              ))}
-          </div>
+          <div className="flex justify-between mb-10">
+            {/* TAGS */}
+            <div className="flex flex-wrap items-start w-full gap-2 md:gap-4">
+              {data.mdx.frontmatter.tags
+                .split(",")
+                .map((tag) => tag.trim())
+                .filter((tag) => tag.length > 0)
+                .map((tag) => (
+                  <Tag key={tag} label={tag} />
+                ))}
+            </div>
 
-          {/* TODO: Add Discover link */}
+            <a
+              href={data.mdx.frontmatter.link}
+              target="_blank"
+              className="flex items-center group text-tomato"
+              rel="noreferrer"
+            >
+              <Text type="custom" className="font-bold uppercase text-tomato">
+                Discover
+              </Text>
+              <ArrowRightIcon
+                fill={COLORS.tomato.DEFAULT}
+                className="transition-all group-hover:translate-x-1 ml-4"
+              />
+            </a>
+          </div>
 
           {/* DESCRIPTION */}
           <Text type="paragraphSmall" className="mb-10">
@@ -99,6 +122,7 @@ export const GetPostData = graphql`
         roles
         # linkSite
         date
+        link
         image1 {
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED)
